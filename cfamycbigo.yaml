@@ -1,0 +1,109 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+tproxy-port: 7893
+mixed-port: 7894
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+external-ui: folder
+interface-name: en0
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  default-nameserver:
+    - 1.1.1.1
+    - 1.1.1.2
+    - 1.0.0.1
+    - 1.0.0.2
+  nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - https://security.cloudflare-dns.com/dns-query
+    - https://family.cloudflare-dns.com/dns-query
+    - tls://1dot1dot1dot1.cloudflare-dns.com:853
+    - tls://security.cloudflare-dns.com:853
+    - tls://family.cloudflare-dns.com:853
+  fallback:
+    - tcp://1.1.1.1
+    - tcp://1.1.1.2
+    - tcp://1.0.0.1
+    - tcp://1.0.0.2
+    - 1.1.1.1
+    - 1.1.1.2
+    - 1.0.0.1
+    - 1.0.0.2
+
+proxy-groups: 
+- name: All 
+  type: select
+  url: 'https://duckduckgo.com'
+  interval: 200
+  proxies:
+  - Ping++
+  - Fallback
+  - Manual
+- name: Manual 
+  type: select
+  url: 'https://duckduckgo.com'
+  interval: 200
+  use:
+  - malaycffa
+- name: Ping++
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 200
+  tolerance: 2000
+  use:
+  - malaycffa
+- name: Fallback
+  type: fallback
+  url: 'https://duckduckgo.com'
+  interval: 200
+  lazy: false
+  use:
+  - malaycffa
+
+proxy-providers:
+  malaycffa:
+    type: http
+    url: "https://raw.githubusercontent.com/zanertz/zz/main/amybigoz.yaml"
+    interval: 123
+    path: ./malaycffa.yaml
+    health-check:
+      enable: true
+      interval: 60
+      lazy: false
+      url: https://duckduckgo.com
+
+rules:
+  - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
+  - DOMAIN-SUFFIX,raw.githubusercontent.com,DIRECT
+  - IP-CIDR,192.168.0.0/16,REJECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,REJECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,REJECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,REJECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,REJECT,no-resolve
+  - IP-CIDR6,::1/128,REJECT,no-resolve
+  - IP-CIDR6,fc00::/7,REJECT,no-resolve
+  - IP-CIDR6,fe80::/10,REJECT,no-resolve
+  - IP-CIDR6,fd00::/8,REJECT,no-resolve
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - DOMAIN,analytics.google.com,REJECT
+  - DOMAIN,analyticsinsights-pa.googleapis.com,REJECT
+  - DOMAIN,analyticsreporting.googleapis.com,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,googleadservices.com,REJECT
+  - DOMAIN-SUFFIX,googleadsserving.cn,REJECT
+  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,googletagmanager.com,REJECT
+  - DOMAIN-SUFFIX,googletagservices.com,REJECT
+  - DOMAIN-SUFFIX,google-analytics.com,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-KEYWORD,analytics,REJECT
+  - DOMAIN-KEYWORD,analysis,REJECT
+  - SRC-IP-CIDR,192.168.1.201/32,REJECT
+  - IP-CIDR,198.18.0.1/16,REJECT,REJECT
+  - GEOIP,IR,REJECT
+  - MATCH,All
