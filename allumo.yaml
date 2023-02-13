@@ -6,7 +6,7 @@ proxies:
   type: trojan
   server: sg2.socifiles.com
   port: 443
-  password: dff00330-a965-11ed-bff5-1239d0255272
+  password: 8b93c2f0-abb9-11ed-ba58-1239d0255272
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -14,17 +14,28 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
+- name: "VpmDo15march"
+  type: trojan
+  server: sgal1.vpn1.cloud
+  port: 443
+  password: b6058df0-abb7-11ed-9a66-cdc46f448286
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
 
-- name: "HideDo"
-  server: dns.google.2v66ge.hidessh.my.id
+- name: "dummy"
+  server: sgal1.vpn1.cloudxxxx
   port: 443
   type: trojan
-  password: 5d27cf48-fad3-42e1-8ba8-2aae6a10b450
+  password: b6058df0-abb7-11ed-9a66-cdc46f448286
   skip-cert-verify: true
   sni: mobilelegends.com
   network: ws
   ws-opts:
-   path: /hidessh-trojan-ws
+   path: /trojan
    headers:
     Host: mobilelegends.com
   udp: true
@@ -59,7 +70,7 @@ proxies:
   type: trojan
   server: sg2-full.privateip.net
   port: 443
-  password: 37f3e0d4-03ec-4792-a598-7f45c9552ba8
+  password: 6280e7f3-c528-479f-8868-c49b8ea4d8c3
   udp: true
   sni: mobilelegends.com
   alpn:
