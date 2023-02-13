@@ -15,19 +15,7 @@ proxies:
   skip-cert-verify: true
 
 - name: "VpmDo15march"
-  type: trojan
-  server: ulist.com.my.sgal1.vpn1.cloud
-  port: 443
-  password: b6058df0-abb7-11ed-9a66-cdc46f448286
-  udp: true
-  sni: mm.net.my
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
-- name: "dummy"
-  server: ulist.com.my.sg2.sgal1.vpn1.cloudxxx
+  server: ulist.com.my.sg2.sgal1.vpn1.cloud
   port: 443
   type: trojan
   password: b6058df0-abb7-11ed-9a66-cdc46f448286
@@ -70,7 +58,7 @@ proxies:
   type: trojan
   server: ulist.com.my.sg-full.privateip.net
   port: 443
-  password: b1be65f8-d4ce-40a0-903f-a7e4f6402636
+  password: 313d8030-49df-458a-9437-f995050d0e17
   udp: true
   sni: mm.net.my
   alpn:
