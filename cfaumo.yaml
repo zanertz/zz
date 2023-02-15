@@ -135,8 +135,8 @@ proxy-groups:
   interval: 20
   strategy: round-robin
   disable-udp: false
-  tolerance: 600
-  lazy: false
+  tolerance: 2000
+  lazy: true
   proxies:
   - Pinglbx
   - Fallbacklb3x
