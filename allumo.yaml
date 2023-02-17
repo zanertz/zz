@@ -30,21 +30,39 @@ proxies:
 
 ##### fastest server #####
 
-- name: "freevmessT"
-  type: trojan
-  server: dns.google.sg-freevmess.privateip.net
-  port: 443
-  password: e5327dda-62d6-4588-8fdf-185c90e291b0
-  udp: true
-  sni: mobilelegends.com
-  alpn:
-     - h2
-     - http/1.1
+- name: "RaceGprcA"
+  server: sg-full.privateip.net
+  port: 2003
+  type: vless
+  uuid: 333e2c5f-0aef-42fc-9176-b1cf726a239e
+  cipher: auto
+  tls: true
   skip-cert-verify: true
+  servername: mm.net.my
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: xray-vless-grpc
+  udp: true
+
+- name: "RaceGprcB"
+  server: sg2-full.privateip.net
+  port: 2003
+  type: vless
+  uuid: 1475bf99-cea5-486f-9dc6-9225de262e27
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: mm.net.my
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: xray-vless-grpc
+  udp: true
 
 - name: "RaceA"
   type: trojan
-  server: sg-full.privateip.net
+  server: sg-full.privateip.netyy
   port: 443
   password: 313d8030-49df-458a-9437-f995050d0e17
   udp: true
@@ -56,7 +74,7 @@ proxies:
 
 - name: "RaceB"
   type: trojan
-  server: sg2-full.privateip.net
+  server: sg2-full.privateip.netyy
   port: 443
   password: 6280e7f3-c528-479f-8868-c49b8ea4d8c3
   udp: true
@@ -69,18 +87,6 @@ proxies:
 
 ##### Timed server #####
 
-- name: "HowdyUdp3Do24jan.17febdns"
-  type: trojan
-  server: trojan3.udpgw.com
-  port: 443
-  password: 64bdfa80-96c6-11ed-ab90-1239d0255272
-  udp: true
-  sni: mobilelegends.com
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
 - name: "HowdyUdp2Do22feb"
   type: trojan
   server: trojan2.udpgw.com
@@ -92,23 +98,6 @@ proxies:
      - h2
      - http/1.1
   skip-cert-verify: true
-
-- name: "DynamicDo23jan"
-  server: dynamic-sg3b.obfs.xyz
-  port: 443
-  type: vmess
-  uuid: 44f2b093-e90d-402a-8683-05a191ee5f94
-  sni: mobilelegends.com
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-   path: /worryfree
-   headers:
-    Host: mobilelegends.com
 
 - name: "Fastdyna20feb"
   server: dynamic-sg2b.obfs.xyz
@@ -126,24 +115,6 @@ proxies:
    path: /worryfree
    headers:
     Host: mobilelegends.com
-
-- name: "DynamicDo6feb"
-  server: dynamic-sg1b.obfs.xyz
-  port: 443
-  type: vmess
-  uuid: 8b31388c-047a-4796-82ec-1dae3bbc589b
-  sni: mobilelegends.com
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-   path: /worryfree
-   headers:
-    Host: mobilelegends.com
-
 
 ##### Backup Server ######
 
