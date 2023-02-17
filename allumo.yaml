@@ -38,7 +38,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: mm.net.my
+  servername: mobilelegends.com
   network: grpc
   grpc-opts:
     grpc-mode: gun
@@ -53,7 +53,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: mm.net.my
+  servername: mobilelegends.com
   network: grpc
   grpc-opts:
     grpc-mode: gun
