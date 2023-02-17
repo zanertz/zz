@@ -42,7 +42,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-mode: gun
-    grpc-service-name: /grpc
+    grpc-service-name: grpc
   udp: true
 
 - name: "RaceGprcB"
@@ -57,7 +57,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-mode: gun
-    grpc-service-name: /grpc
+    grpc-service-name: grpc
   udp: true
 
 - name: "RaceA"
