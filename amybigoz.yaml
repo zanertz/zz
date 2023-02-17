@@ -4,7 +4,7 @@ proxies:
   server: my1.v2rayserv.com
   port: 443
   type: vmess
-  uuid: 66f300b0-54bb-42db-a5be-94d7ce6d2585
+  uuid: 3d483473-9db1-43cc-9165-7772da6ff48d
   sni: mobilelegends.com
   alterId: 0
   cipher: auto
