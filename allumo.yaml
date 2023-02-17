@@ -42,12 +42,12 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-mode: gun
-    grpc-service-name: xray-vless-grpc
+    grpc-service-name: /grpc
   udp: true
 
 - name: "RaceGprcB"
   server: sg2-full.privateip.net
-  port: 2003
+  port: 2002
   type: vless
   uuid: 1475bf99-cea5-486f-9dc6-9225de262e27
   cipher: auto
@@ -57,7 +57,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-mode: gun
-    grpc-service-name: xray-vless-grpc
+    grpc-service-name: /grpc
   udp: true
 
 - name: "RaceA"
