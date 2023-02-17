@@ -30,41 +30,11 @@ proxies:
 
 ##### fastest server #####
 
-- name: "RaceGprcA"
-  server: sg-full.privateip.net
-  port: 2003
-  type: vless
-  uuid: 333e2c5f-0aef-42fc-9176-b1cf726a239e
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: mobilelegends.com
-  network: grpc
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: grpc
-  udp: true
-
-- name: "RaceGprcB"
-  server: sg2-full.privateip.net
-  port: 2002
-  type: vless
-  uuid: 1475bf99-cea5-486f-9dc6-9225de262e27
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: mobilelegends.com
-  network: grpc
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: /grpc
-  udp: true
-
 - name: "RaceA"
   type: trojan
-  server: sg-full.privateip.netyy
+  server: sg-full.privateip.net
   port: 443
-  password: 313d8030-49df-458a-9437-f995050d0e17
+  password: e9617acf-3e1c-4340-a235-23d89de1376b
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -74,7 +44,7 @@ proxies:
 
 - name: "RaceB"
   type: trojan
-  server: sg2-full.privateip.netyy
+  server: sg2-full.privateip.net
   port: 443
   password: 6280e7f3-c528-479f-8868-c49b8ea4d8c3
   udp: true
