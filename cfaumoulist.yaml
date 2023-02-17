@@ -138,9 +138,9 @@ proxy-groups:
   tolerance: 2000
   lazy: true
   proxies:
-  - Pinglbx
+  - Pinglb
   - Fallbacklb3x
-  - Pinglb2x
+  - Pinglb2
 - name: Manual1
   type: select
   url: 'https://duckduckgo.com'
@@ -201,7 +201,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 400
+  tolerance: 200
   lazy: false
   use:
   - sall
@@ -209,23 +209,23 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 400
+  tolerance: 200
   lazy: false
   use:
   - sall
 - name: Pinglbx
   type: url-test
   url: 'https://duckduckgo.com'
-  interval: 15
-  tolerance: 300
+  interval: 40
+  tolerance: 400
   lazy: false
   use:
   - sall
 - name: Pinglb2x
   type: url-test
   url: 'https://duckduckgo.com'
-  interval: 30
-  tolerance: 600
+  interval: 40
+  tolerance: 400
   lazy: false
   use:
   - sall
@@ -233,7 +233,7 @@ proxy-groups:
   type: fallback
   url: 'https://duckduckgo.com'
   interval: 60
-  tolerance: 900
+  tolerance: 600
   lazy: false
   use:
   - sall
