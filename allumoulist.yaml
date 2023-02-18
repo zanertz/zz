@@ -61,44 +61,39 @@ proxies:
 
 ##### fastest server #####
 
-- name: "RaceXvmessA"
-  server: sg-v2ray.ipracevpn.com
-  port: 8443
-  type: vmess
-  uuid: c59b4b01-6d64-40d7-f77b-f19549730a24
-  sni: mm.net.my
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  network: tcp
-
-- name: "RaceXvmessB"
-  server: sg2-v2ray.ipracevpn.com
+- name: "RaceAvmess"
+  server: ulist.com.my.sg-full.privateip.net
   port: 443
   type: vmess
-  uuid: 9b2e4d32-c5ed-4b44-ec96-0402ed55f7bc
+  uuid: 333e2c5f-0aef-42fc-9176-b1cf726a239e
   sni: mm.net.my
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
   udp: true
-  network: tcp
+  network: ws
+  ws-opts:
+   path: /racevpn
+   headers:
+    Host: mm.net.my
 
-- name: "RaceXvmessC"
-  server: sg3-v2ray.ipracevpn.com
+- name: "RaceBvmess"
+  server: ulist.com.my.sg2-full.privateip.net
   port: 443
   type: vmess
-  uuid: 8cc60718-0c69-4421-e55c-aa05439886a4
+  uuid: 1475bf99-cea5-486f-9dc6-9225de262e27
   sni: mm.net.my
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
   udp: true
-  network: tcp
+  network: ws
+  ws-opts:
+   path: /racevpn
+   headers:
+    Host: mm.net.my
 
 - name: "RaceA"
   type: trojan
