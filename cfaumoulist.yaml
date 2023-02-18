@@ -82,17 +82,14 @@ proxy-groups:
   interval: 12
   proxies:
   - PingLBXFinal
-  - FallbackLBXFinal
   - PingLBXFinalch
   - PingDiabloMux
   - SuperRobin3
   - Ping++
-  - Ping++mix
   - PingLB++rb
   - PingLB++ch
   - Fallback
-  - FallbackLBrb
-  - FallbackLBch
+  - FallbackX
   - Manual
 - name: PingLBXFinal
   type: url-test
@@ -132,15 +129,15 @@ proxy-groups:
 - name: SuperRobin3
   type: load-balance
   url: 'https://duckduckgo.com'
-  interval: 20
+  interval: 18
   strategy: round-robin
   disable-udp: false
-  tolerance: 2000
+  tolerance: 1800
   lazy: true
   proxies:
-  - Pinglb
+  - Pinglbx
   - Fallbacklb3x
-  - Pinglb2
+  - Pinglb2x
 - name: Manual1
   type: select
   url: 'https://duckduckgo.com'
@@ -160,7 +157,7 @@ proxy-groups:
   strategy: round-robin
   disable-udp: false
   tolerance: 600
-  lazy: false
+  lazy: true
   proxies:
   - Pinglb
   - Pinglb2
@@ -171,7 +168,7 @@ proxy-groups:
   strategy: round-robin
   disable-udp: false
   tolerance: 600
-  lazy: false
+  lazy: true
   proxies:
   - Pinglbx
   - Pinglb2x
@@ -182,7 +179,7 @@ proxy-groups:
   strategy: consistent-hashing
   disable-udp: false
   tolerance: 600
-  lazy: false
+  lazy: true
   proxies:
   - Pinglb
   - Pinglbx
@@ -193,7 +190,7 @@ proxy-groups:
   strategy: consistent-hashing
   disable-udp: false
   tolerance: 600
-  lazy: false
+  lazy: true
   proxies:
   - Pinglb2
   - Pinglb2x
@@ -201,40 +198,40 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 200
-  lazy: false
+  tolerance: 400
+  lazy: true
   use:
   - sall
 - name: Pinglb2
   type: url-test
   url: 'https://duckduckgo.com'
-  interval: 20
-  tolerance: 200
-  lazy: false
+  interval: 22
+  tolerance: 400
+  lazy: true
   use:
   - sall
 - name: Pinglbx
   type: url-test
   url: 'https://duckduckgo.com'
-  interval: 40
-  tolerance: 400
-  lazy: false
+  interval: 20
+  tolerance: 600
+  lazy: true
   use:
   - sall
 - name: Pinglb2x
   type: url-test
   url: 'https://duckduckgo.com'
-  interval: 40
-  tolerance: 400
-  lazy: false
+  interval: 22
+  tolerance: 600
+  lazy: true
   use:
   - sall
 - name: Fallbacklb3x
   type: fallback
   url: 'https://duckduckgo.com'
-  interval: 60
+  interval: 62
   tolerance: 600
-  lazy: false
+  lazy: true
   use:
   - sall
 - name: Ping++
@@ -242,27 +239,15 @@ proxy-groups:
   url: 'https://duckduckgo.com'
   interval: 12
   tolerance: 1200
-  lazy: false
+  lazy: true
   use:
   - sall
-- name: Ping++mix
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 12
-  tolerance: 1200
-  lazy: false
-  proxies:
-  - Manual1
-  - Manual2
-  - Pinga
-  - Pingb
-  - Fallback
 - name: Pinga
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
   tolerance: 400
-  lazy: false
+  lazy: true
   use:
   - sall
 - name: Pingb
@@ -270,61 +255,17 @@ proxy-groups:
   url: 'https://duckduckgo.com'
   interval: 20
   tolerance: 400
-  lazy: false
+  lazy: true
   use:
   - sall
-- name: FallbackLBXFinal
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 10
-  tolerance: 2000
-  lazy: false
-  proxies:
-  - FallbackLBrb
-  - FallbackLBrb2
-- name: FallbackLBrb
-  type: load-balance
-  url: 'https://duckduckgo.com'
-  interval: 24
-  strategy: round-robin
-  disable-udp: false
-  tolerance: 600
-  lazy: false
-  proxies:
-  - Fallback
-  - Fallback2
-- name: FallbackLBrb2
-  type: load-balance
-  url: 'https://duckduckgo.com'
-  interval: 24
-  strategy: round-robin
-  disable-udp: false
-  tolerance: 600
-  lazy: false
-  proxies:
-  - Fallback
-  - Fallback2
-- name: FallbackLBch
-  type: load-balance
-  url: 'https://duckduckgo.com'
-  interval: 24
-  strategy: consistent-hashing
-  disable-udp: false
-  lazy: false
-  proxies:
-  - Fallback
-  - Fallback2
 - name: Fallback
   type: fallback
   url: 'https://duckduckgo.com'
   tolerance: 420
   interval: 22
-  proxies:
-  - Manual1
-  - Manual2
-  - Pinga
-  - Pingb
-- name: Fallback2
+  use:
+  - sall
+- name: FallbackX
   type: fallback
   url: 'https://duckduckgo.com'
   tolerance: 420

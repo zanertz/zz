@@ -2,18 +2,6 @@ proxies:
 
 ##### Optional server
 
-- name: "CenterhopeSg2"
-  type: trojan
-  server: sg2.socifiles.com
-  port: 443
-  password: 85020d30-ad0c-11ed-ab9f-1239d0255272
-  udp: true
-  sni: mobilelegends.com
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
 - name: "VpmDo15march"
   server: sgal1.vpn1.cloud
   port: 443
@@ -28,32 +16,17 @@ proxies:
     Host: mobilelegends.com
   udp: true
 
-##### fastest server #####
-
-- name: "RaceA"
+- name: "CenterhopeSg2"
   type: trojan
-  server: sg-full.privateip.net
+  server: sg2.socifiles.com
   port: 443
-  password: e9617acf-3e1c-4340-a235-23d89de1376b
+  password: 85020d30-ad0c-11ed-ab9f-1239d0255272
   udp: true
   sni: mobilelegends.com
   alpn:
      - h2
      - http/1.1
   skip-cert-verify: true
-
-- name: "RaceB"
-  type: trojan
-  server: sg2-full.privateip.net
-  port: 443
-  password: 6280e7f3-c528-479f-8868-c49b8ea4d8c3
-  udp: true
-  sni: mobilelegends.com
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
 
 ##### Timed server #####
 
@@ -85,6 +58,32 @@ proxies:
    path: /worryfree
    headers:
     Host: mobilelegends.com
+
+##### fastest server #####
+
+- name: "RaceA"
+  type: trojan
+  server: sg-full.privateip.net
+  port: 443
+  password: e9617acf-3e1c-4340-a235-23d89de1376b
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "RaceB"
+  type: trojan
+  server: sg2-full.privateip.net
+  port: 443
+  password: 6280e7f3-c528-479f-8868-c49b8ea4d8c3
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
 
 ##### Backup Server ######
 
