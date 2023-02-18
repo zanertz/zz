@@ -61,6 +61,32 @@ proxies:
 
 ##### fastest server #####
 
+- name: "RaceXvlessA"
+  server: ulist.com.my.sg-full.privateip.net
+  port: 443
+  type: vless
+  uuid: 333e2c5f-0aef-42fc-9176-b1cf726a239e
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: mm.net.my
+  network: tcp
+  sni: mm.net.my
+  udp: true
+
+- name: "RaceXvlessB"
+  server: ulist.com.my.sg2-full.privateip.net
+  port: 443
+  type: vless
+  uuid: 1475bf99-cea5-486f-9dc6-9225de262e27
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: mm.net.my
+  network: tcp
+  sni: mm.net.my
+  udp: true
+
 - name: "RaceA"
   type: trojan
   server: ulist.com.my.sg-full.privateip.net
