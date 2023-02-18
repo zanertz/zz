@@ -89,7 +89,7 @@ proxies:
 
 - name: "RaceA"
   type: trojan
-  server: ulist.com.my.sg-full.privateip.net
+  server: ulist.com.my.sg-full.privateip.netyy
   port: 443
   password: e9617acf-3e1c-4340-a235-23d89de1376b
   udp: true
@@ -101,7 +101,7 @@ proxies:
 
 - name: "RaceB"
   type: trojan
-  server: ulist.com.my.sg2-full.privateip.net
+  server: ulist.com.my.sg2-full.privateip.netyy
   port: 443
   password: 6280e7f3-c528-479f-8868-c49b8ea4d8c3
   udp: true
