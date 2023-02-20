@@ -216,7 +216,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 600
+  tolerance: 200
   lazy: true
   use:
   - sall
@@ -224,15 +224,15 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 22
-  tolerance: 600
+  tolerance: 200
   lazy: true
   use:
   - sall
 - name: Fallbacklb3x
   type: fallback
   url: 'https://duckduckgo.com'
-  interval: 62
-  tolerance: 600
+  interval: 32
+  tolerance: 200
   lazy: true
   proxies:
   - Manual1
