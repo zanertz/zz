@@ -81,45 +81,18 @@ proxy-groups:
   url: 'https://duckduckgo.com'
   interval: 12
   proxies:
+  - SuperRobin3
+  - Manual
+  - Manual1
+  - Manual2
   - PingLBXFinal
   - PingLBXFinalch
   - PingDiabloMux
-  - SuperRobin3
   - Ping++
   - PingLB++rb
   - PingLB++ch
   - Fallback
   - FallbackX
-  - Manual
-- name: PingLBXFinal
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 10
-  tolerance: 2000
-  lazy: false
-  proxies:
-  - PingLB++rb
-  - PingLB++rb2
-- name: PingLBXFinalch
-  type: load-balance
-  url: 'https://duckduckgo.com'
-  strategy: consistent-hashing
-  disable-udp: false
-  interval: 10
-  tolerance: 2000
-  lazy: false
-  proxies:
-  - PingLB++ch
-  - PingLB++ch2
-- name: PingDiabloMux
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 10
-  tolerance: 2000
-  lazy: false
-  proxies:
-  - Pinglb
-  - Pinglb2
 - name: Manual 
   type: select
   url: 'https://duckduckgo.com'
@@ -150,6 +123,35 @@ proxy-groups:
   interval: 12
   use:
   - sall
+- name: PingLBXFinal
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 10
+  tolerance: 2000
+  lazy: false
+  proxies:
+  - PingLB++rb
+  - PingLB++rb2
+- name: PingLBXFinalch
+  type: load-balance
+  url: 'https://duckduckgo.com'
+  strategy: consistent-hashing
+  disable-udp: false
+  interval: 10
+  tolerance: 2000
+  lazy: false
+  proxies:
+  - PingLB++ch
+  - PingLB++ch2
+- name: PingDiabloMux
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 10
+  tolerance: 2000
+  lazy: false
+  proxies:
+  - Pinglb
+  - Pinglb2
 - name: PingLB++rb
   type: load-balance
   url: 'https://duckduckgo.com'
@@ -232,8 +234,9 @@ proxy-groups:
   interval: 62
   tolerance: 600
   lazy: true
-  use:
-  - sall
+  proxies:
+  - Manual1
+  - Fallback
 - name: Ping++
   type: url-test
   url: 'https://duckduckgo.com'
