@@ -3,12 +3,12 @@ proxies:
 ##### fastest server #####
 
 - name: "TrogprcSgOne"
-  server: asia1.oceis.net
+  server: ulist.com.my.asia1.oceis.net
   port: 443
   type: trojan
   password: 8a0ef790-b2c0-11ed-b833-205c6d5f5d78
   skip-cert-verify: true
-  sni: mobilelegends.com
+  sni: mm.net.my
   network: grpc
   grpc-opts:
    grpc-mode: gun
@@ -16,11 +16,11 @@ proxies:
   udp: true
 
 - name: "RaceAvmess"
-  server: sg-full.privateip.net
+  server: ulist.com.my.sg-full.privateip.net
   port: 443
   type: vmess
   uuid: 333e2c5f-0aef-42fc-9176-b1cf726a239e
-  sni: mobilelegends.com
+  sni: mm.net.my
   alterId: 0
   cipher: auto
   tls: true
@@ -30,14 +30,14 @@ proxies:
   ws-opts:
    path: /racevpn
    headers:
-    Host: mobilelegends.com
+    Host: mm.net.my
 
 - name: "RaceBvmess"
-  server: sg2-full.privateip.net
+  server: ulist.com.my.sg2-full.privateip.net
   port: 443
   type: vmess
   uuid: 1475bf99-cea5-486f-9dc6-9225de262e27
-  sni: mobilelegends.com
+  sni: mm.net.my
   alterId: 0
   cipher: auto
   tls: true
@@ -47,15 +47,15 @@ proxies:
   ws-opts:
    path: /racevpn
    headers:
-    Host: mobilelegends.com
+    Host: mm.net.my
 
 - name: "RaceA"
   type: trojan
-  server: sg-full.privateip.netyy
+  server: ulist.com.my.sg-full.privateip.netyy
   port: 443
   password: e9617acf-3e1c-4340-a235-23d89de1376b
   udp: true
-  sni: mobilelegends.com
+  sni: mm.net.my
   alpn:
      - h2
      - http/1.1
@@ -63,11 +63,11 @@ proxies:
 
 - name: "RaceB"
   type: trojan
-  server: sg2-full.privateip.netyy
+  server: ulist.com.my.sg2-full.privateip.netyy
   port: 443
   password: 6280e7f3-c528-479f-8868-c49b8ea4d8c3
   udp: true
-  sni: mobilelegends.com
+  sni: mm.net.my
   alpn:
      - h2
      - http/1.1

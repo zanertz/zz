@@ -3,26 +3,26 @@ proxies:
 ##### Optional server
 
 - name: "VpmDo15march"
-  server: sgal1.vpn1.cloud
+  server: ulist.com.my.sg2.sgal1.vpn1.cloud
   port: 443
   type: trojan
   password: b6058df0-abb7-11ed-9a66-cdc46f448286
   skip-cert-verify: true
-  sni: mobilelegends.com
+  sni: mm.net.my
   network: ws
   ws-opts:
    path: /trojan
    headers:
-    Host: mobilelegends.com
+    Host: mm.net.my
   udp: true
 
 - name: "CenterhopeSg2"
   type: trojan
-  server: sg2.socifiles.com
+  server: ulist.com.my.sg2.socifiles.com
   port: 443
   password: 85020d30-ad0c-11ed-ab9f-1239d0255272
   udp: true
-  sni: mobilelegends.com
+  sni: mm.net.my
   alpn:
      - h2
      - http/1.1
@@ -32,22 +32,22 @@ proxies:
 
 - name: "HowdyUdp2Do22feb"
   type: trojan
-  server: trojan2.udpgw.com
+  server: ulist.com.my.trojh1.merutd.cloudns.nz
   port: 443
   password: e6430f20-a868-11ed-a388-1239d0255272
   udp: true
-  sni: mobilelegends.com
+  sni: mm.net.my
   alpn:
      - h2
      - http/1.1
   skip-cert-verify: true
 
 - name: "Fastdyna20feb"
-  server: dynamic-sg2b.obfs.xyz
+  server: ulist.com.my.dynamic-sg2b.obfs.xyz
   port: 443
   type: vmess
   uuid: 50adb8a3-6c50-4b28-8f32-2ed698f85a8a
-  sni: mobilelegends.com
+  sni: mm.net.my
   alterId: 0
   cipher: auto
   tls: true
@@ -57,16 +57,16 @@ proxies:
   ws-opts:
    path: /worryfree
    headers:
-    Host: mobilelegends.com
+    Host: mm.net.my
 
 ##### Backup Server ######
 
 - name: "backserver"
-  server: sgv-3.openv2ray.com
+  server: ulist.com.my.sgv-3.openv2ray.com
   port: 443
   type: vmess
   uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-  sni: mobilelegends.com
+  sni: mm.net.my
   alterId: 0
   cipher: auto
   tls: true
@@ -76,14 +76,14 @@ proxies:
   ws-opts:
    path: /u/opentunnel.net-iltixc
    headers:
-    Host: mobilelegends.com
+    Host: mm.net.my
 
 - name: "backserversk1-22jan"
   server: sg1-v2ray.sshkit.org
   port: 443
   type: vmess
   uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-  sni: mobilelegends.com
+  sni: mm.net.my
   alterId: 0
   cipher: auto
   tls: true
@@ -93,14 +93,14 @@ proxies:
   ws-opts:
    path: /sshkit/1074999023/63a51672383c8/
    headers:
-    Host: mobilelegends.com
+    Host: mm.net.my
 
 - name: "backserversk4-23feb"
-  server: sg4-v2ray.sshkit.org
+  server: ulist.com.my.22feb-dns.whyssh.my.id
   port: 443
   type: vmess
   uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-  sni: mobilelegends.com
+  sni: mm.net.my
   alterId: 0
   cipher: auto
   tls: true
@@ -110,20 +110,21 @@ proxies:
   ws-opts:
    path: /sshkit/1074999023/63cec9036bc6b/
    headers:
-    Host: mobilelegends.com
+    Host: mm.net.my
 
 ##### fastest server #####
 
 - name: "TrogprcHR"
-  server: sg3.socifiles.com
+  server: ulist.com.my.sg3.socifiles.com
   port: 443
   type: trojan
   password: 3465bc80-b2c0-11ed-ae0d-1239d0255272
   skip-cert-verify: true
-  sni: mobilelegends.com
+  sni: mm.net.my
   network: grpc
   grpc-opts:
    grpc-mode: gun
    grpc-service-name: trgrpc
   udp: true
+
 

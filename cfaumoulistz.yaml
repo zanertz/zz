@@ -40,7 +40,7 @@ dns:
     - 1.1.1.2
     - 1.0.0.1
     - 1.0.0.2
-  fake-ip-range: 198.18.0.1/16
+  fake-ip-range: 198.18.0.1/16   
   fake-ip-filter:
   - "+.*"
   - ntp7.*.com
@@ -300,7 +300,7 @@ proxy-groups:
 proxy-providers:
   sall:
     type: http
-    url: "https://raw.githubusercontent.com/zanertz/zz/main/allumoA.yaml"
+    url: "https://raw.githubusercontent.com/zanertz/zz/main/allumoulistA.yaml"
     interval: 122
     path: ./sall.yaml
     health-check:
@@ -310,7 +310,7 @@ proxy-providers:
       url: https://duckduckgo.com
   sall2:
     type: http
-    url: "https://raw.githubusercontent.com/zanertz/zz/main/allumoB.yaml"
+    url: "https://raw.githubusercontent.com/zanertz/zz/main/allumoulistB.yaml"
     interval: 122
     path: ./sall2.yaml
     health-check:
