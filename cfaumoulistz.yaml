@@ -320,6 +320,7 @@ proxy-providers:
       url: https://duckduckgo.com
 
 rules:
+  - DOMAIN-SUFFIX,duckduckgo.com,howdyamp30gb23feb
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
   - DOMAIN-SUFFIX,raw.githubusercontent.com,howdyamp30gb23feb
   - IP-CIDR,192.168.0.0/16,REJECT,no-resolve
