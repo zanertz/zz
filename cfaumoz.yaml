@@ -94,8 +94,8 @@ proxy-groups:
   url: 'https://duckduckgo.com'
   interval: 12
   proxies:
-  - howdyamp30gb23feb
   - SuperRobin3
+  - howdyamp30gb23feb
   - Manual
   - Manual1
   - Manual2
