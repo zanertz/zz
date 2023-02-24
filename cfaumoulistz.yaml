@@ -255,9 +255,9 @@ proxy-groups:
 - name: Ping++
   type: url-test
   url: 'https://duckduckgo.com'
-  interval: 12
-  tolerance: 1200
-  lazy: true
+  interval: 20
+  tolerance: 500
+  lazy: false
   use:
   - sall
 - name: Pinga
