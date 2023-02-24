@@ -138,12 +138,10 @@ proxy-groups:
   use:
   - sall
 - name: superfastlane
-  type: load-balance
+  type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  strategy: consistent-hashing
-  disable-udp: false
-  tolerance: 600
+  tolerance: 200
   lazy: true
   use:
   - sall2
@@ -256,8 +254,8 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 500
-  lazy: false
+  tolerance: 200
+  lazy: true
   use:
   - sall
 - name: Pinga
@@ -351,8 +349,8 @@ rules:
   - DOMAIN-KEYWORD,akamai.net,superfastlane
   - DOMAIN-KEYWORD,akamaiedge.net,superfastlane
   - DOMAIN-KEYWORD,bigo,superfastlane
-  - DOMAIN-KEYWORD,google,Fallback
-  - DOMAIN-KEYWORD,youtube,Fallback
+  - DOMAIN-KEYWORD,google,Manual
+  - DOMAIN-KEYWORD,youtube,Manual
   - DOMAIN-SUFFIX,my1.v2rayserv.com,howdyamp30gb23feb
   - DOMAIN-SUFFIX,duckduckgo.com,howdyamp30gb23feb
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
