@@ -96,6 +96,7 @@ proxy-groups:
   proxies:
   - SuperRobin3
   - howdyamp30gb23feb
+  - superfastlane
   - Manual
   - Manual1
   - Manual2
@@ -112,7 +113,6 @@ proxy-groups:
   interval: 12
   use:
   - sall
-  - sall2
 - name: SuperRobin3
   type: load-balance
   url: 'https://duckduckgo.com'
@@ -131,13 +131,21 @@ proxy-groups:
   interval: 12
   use:
   - sall
-  - sall2
 - name: Manual2
   type: select
   url: 'https://duckduckgo.com'
   interval: 12
   use:
   - sall
+- name: superfastlane
+  type: load-balance
+  url: 'https://duckduckgo.com'
+  interval: 20
+  strategy: consistent-hashing
+  disable-udp: false
+  tolerance: 600
+  lazy: true
+  use:
   - sall2
 - name: PingLBXFinal
   type: url-test
@@ -218,7 +226,7 @@ proxy-groups:
   tolerance: 200
   lazy: true
   use:
-  - sall2
+  - sall
 - name: Pinglbx
   type: url-test
   url: 'https://duckduckgo.com'
@@ -234,7 +242,7 @@ proxy-groups:
   tolerance: 200
   lazy: true
   use:
-  - sall2
+  - sall
 - name: Fallbacklb3x
   type: fallback
   url: 'https://duckduckgo.com'
@@ -274,7 +282,6 @@ proxy-groups:
   tolerance: 420
   interval: 22
   use:
-  - sall2
   - sall
 - name: FallbackX
   type: fallback
@@ -310,6 +317,41 @@ proxy-providers:
       url: https://duckduckgo.com
 
 rules:
+  - DOMAIN-SUFFIX,support1.like.video,superfastlane
+  - DOMAIN-SUFFIX,gdl.bigo.sg,superfastlane
+  - DOMAIN-SUFFIX,activity.bigo.tv,superfastlane
+  - DOMAIN-SUFFIX,graph.facebook.com,superfastlane
+  - DOMAIN-SUFFIX,launches.appsflyersdk.com,superfastlane
+  - DOMAIN-SUFFIX,static-act.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,api.likee.video,superfastlane
+  - DOMAIN-SUFFIX,static-act.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,exp.bigo.sg,superfastlane
+  - DOMAIN-SUFFIX,inapps.appsflyersdk.com,superfastlane
+  - DOMAIN-SUFFIX,hotroom.live.bigo.sg,superfastlane
+  - DOMAIN-SUFFIX,flag.bigo.sg,superfastlane
+  - DOMAIN-SUFFIX,static.f2ecdn.com,superfastlane
+  - DOMAIN-SUFFIX,support1.like.video,superfastlane
+  - DOMAIN-SUFFIX,esx.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,firebaseremoteconfig.googleapis.com,superfastlane
+  - DOMAIN-SUFFIX,static-fed.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,static-web.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,ta.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,static-act.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,ta.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,static-act.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,support-json.like.video,superfastlane
+  - DOMAIN-SUFFIX,newlbs.live.bigo.sg,superfastlane
+  - DOMAIN-SUFFIX,bstream.sgmbocast.com,superfastlane
+  - DOMAIN-SUFFIX,v-sg.likee.video,superfastlane
+  - DOMAIN-SUFFIX,socks.live.bigo.sg,superfastlane
+  - DOMAIN-SUFFIX,asiabigosocks.like.bigo.sg,superfastlane
+  - DOMAIN-KEYWORD,tiktokcdn.com,superfastlane
+  - DOMAIN-KEYWORD,tiktokv.com,superfastlane
+  - DOMAIN-KEYWORD,akamai.net,superfastlane
+  - DOMAIN-KEYWORD,akamaiedge.net,superfastlane
+  - DOMAIN-KEYWORD,bigo,superfastlane
+  - DOMAIN-KEYWORD,google,Fallback
+  - DOMAIN-SUFFIX,youtube,Fallback
   - DOMAIN-SUFFIX,my1.v2rayserv.com,howdyamp30gb23feb
   - DOMAIN-SUFFIX,duckduckgo.com,howdyamp30gb23feb
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
