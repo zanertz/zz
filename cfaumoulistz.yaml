@@ -347,11 +347,12 @@ rules:
   - DOMAIN-SUFFIX,asiabigosocks.like.bigo.sg,superfastlane
   - DOMAIN-KEYWORD,tiktokcdn.com,superfastlane
   - DOMAIN-KEYWORD,tiktokv.com,superfastlane
+  - DOMAIN-KEYWORD,tiktok.com,superfastlane
   - DOMAIN-KEYWORD,akamai.net,superfastlane
   - DOMAIN-KEYWORD,akamaiedge.net,superfastlane
   - DOMAIN-KEYWORD,bigo,superfastlane
   - DOMAIN-KEYWORD,google,Fallback
-  - DOMAIN-SUFFIX,youtube,Fallback
+  - DOMAIN-KEYWORD,youtube,Fallback
   - DOMAIN-SUFFIX,my1.v2rayserv.com,howdyamp30gb23feb
   - DOMAIN-SUFFIX,duckduckgo.com,howdyamp30gb23feb
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
