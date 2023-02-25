@@ -89,7 +89,7 @@ proxies:
   server: ulist.com.my.sg1.socifiles.com
   port: 443
   type: trojan
-  password: 3f1d9a90-b44a-11ed-841f-1239d0255272
+  password: e5b144f0-b508-11ed-96f1-1239d0255272
   skip-cert-verify: true
   sni: mm.net.my
   network: grpc
