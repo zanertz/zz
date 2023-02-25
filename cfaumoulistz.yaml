@@ -97,6 +97,8 @@ proxy-groups:
   - SuperRobin3
   - howdyamp30gb23feb
   - superfastlane
+  - supercharged
+  - Fallback
   - Manual
   - Manual1
   - Manual2
@@ -105,7 +107,6 @@ proxy-groups:
   - Ping++
   - PingLB++rb
   - PingLB++ch
-  - Fallback
   - FallbackX
 - name: Manual 
   type: select
@@ -143,8 +144,18 @@ proxy-groups:
   interval: 20
   tolerance: 200
   lazy: true
-  use:
-  - sall2
+  proxies:
+  - Fallback2
+  - Fallback
+- name: supercharged
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 20
+  tolerance: 200
+  lazy: true
+  proxies:
+  - Manual2
+  - Fallback
 - name: PingLBXFinal
   type: url-test
   url: 'https://duckduckgo.com'
@@ -262,7 +273,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 400
+  tolerance: 200
   lazy: true
   use:
   - sall
@@ -270,17 +281,24 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 400
+  tolerance: 200
   lazy: true
   use:
-  - sall
+  - sall2
 - name: Fallback
   type: fallback
   url: 'https://duckduckgo.com'
-  tolerance: 420
-  interval: 22
+  tolerance: 600
+  interval: 20
   use:
   - sall
+- name: Fallback2
+  type: fallback
+  url: 'https://duckduckgo.com'
+  tolerance: 600
+  interval: 20
+  use:
+  - sall2
 - name: FallbackX
   type: fallback
   url: 'https://duckduckgo.com'
@@ -349,8 +367,12 @@ rules:
   - DOMAIN-KEYWORD,akamai.net,superfastlane
   - DOMAIN-KEYWORD,akamaiedge.net,superfastlane
   - DOMAIN-KEYWORD,bigo,superfastlane
-  - DOMAIN-KEYWORD,google,Manual
-  - DOMAIN-KEYWORD,youtube,Manual
+  - DOMAIN-KEYWORD,google,supercharged
+  - DOMAIN-KEYWORD,youtube,supercharged
+  - DOMAIN-KEYWORD,ytimg,supercharged
+  - DOMAIN-KEYWORD,instagram,supercharged
+  - DOMAIN-KEYWORD,image,supercharged
+  - DOMAIN-KEYWORD,spotify,supercharged
   - DOMAIN-SUFFIX,my1.v2rayserv.com,howdyamp30gb23feb
   - DOMAIN-SUFFIX,duckduckgo.com,howdyamp30gb23feb
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
