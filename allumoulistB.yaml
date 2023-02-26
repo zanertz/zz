@@ -3,12 +3,12 @@ proxies:
 ##### fastest server #####
 
 - name: "TrogprcHR"
-  server: ulist.com.my.sg3.socifiles.com
+  server: sg3.socifiles.com
   port: 443
   type: trojan
   password: 82987720-b509-11ed-bb06-1239d0255272
   skip-cert-verify: true
-  sni: mm.net.my
+  sni: mobilelegends.com
   network: grpc
   grpc-opts:
    grpc-mode: gun
@@ -16,18 +16,17 @@ proxies:
   udp: true
 
 - name: "TrogprcSgOne"
-  server: ulist.com.my.asia1.oceis.net
+  server: asia1.oceis.net
   port: 443
   type: trojan
   password: 992ec130-b3f7-11ed-b732-205c6d5f5d78
   skip-cert-verify: true
-  sni: mm.net.my
+  sni: mobilelegends.com
   network: grpc
   grpc-opts:
    grpc-mode: gun
    grpc-service-name: trgrpc
   udp: true
-
 
 
 

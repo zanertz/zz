@@ -86,16 +86,16 @@ proxies:
 ##### fastest server #####
 
 - name: "TrogprcOvh"
-  server: ulist.com.my.sg1.socifiles.com
+  server: sgt3.sshocean.net
   port: 443
   type: trojan
-  password: e5b144f0-b508-11ed-96f1-1239d0255272
+  password: 8cef79f4-b069-415b-ae13-d8bfb2b62c62
   skip-cert-verify: true
-  sni: mm.net.my
+  sni: mobilelegends.com
   network: grpc
   grpc-opts:
    grpc-mode: gun
-   grpc-service-name: trgrpc
+   grpc-service-name: grpc
   udp: true
 
 ##### Backup Server ######
