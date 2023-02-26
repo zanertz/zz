@@ -386,6 +386,7 @@ rules:
   - IP-CIDR6,fc00::/7,REJECT,no-resolve
   - IP-CIDR6,fe80::/10,REJECT,no-resolve
   - IP-CIDR6,fd00::/8,REJECT,no-resolve
+  - DOMAIN-SUFFIX,sg-3.test3.net,DIRECT
   - DOMAIN-SUFFIX,ad.com,REJECT
   - DOMAIN,analytics.google.com,REJECT
   - DOMAIN,analyticsinsights-pa.googleapis.com,REJECT
