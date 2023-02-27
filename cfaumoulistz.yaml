@@ -145,7 +145,7 @@ proxy-groups:
   tolerance: 200
   lazy: true
   proxies:
-  - Fallback2
+  - Pingb
   - Fallback
 - name: supercharged
   type: url-test
@@ -373,6 +373,12 @@ rules:
   - DOMAIN-KEYWORD,instagram,supercharged
   - DOMAIN-KEYWORD,image,supercharged
   - DOMAIN-KEYWORD,spotify,supercharged
+  - DOMAIN-KEYWORD,rtmp,Fallback
+  - DOMAIN-KEYWORD,flv,Fallback
+  - DOMAIN-KEYWORD,rtsp,Fallback
+  - DOMAIN-KEYWORD,srt,Fallback
+  - DOMAIN-KEYWORD,html,Fallback
+  - DOMAIN-KEYWORD,rtp,Fallback
   - DOMAIN-SUFFIX,my1.v2rayserv.com,howdyamp30gb23feb
   - DOMAIN-SUFFIX,duckduckgo.com,howdyamp30gb23feb
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
