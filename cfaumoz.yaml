@@ -1,20 +1,21 @@
 port: 7890
 socks-port: 7891
 redir-port: 7892
-tproxy-port: 7893
-mixed-port: 7894
-allow-lan: true
+mixed-port: 7893
 mode: rule
 log-level: info
+allow-lan: true
+external-controller: 0.0.0.0:9090
+bind-address: "*"
+unified-delay: true
 ipv6: false
-external-controller: 127.0.0.1:9090
-external-ui: folder
-interface-name: en0
+profile:
+  store-selected: true
 dns:
   enable: true
   ipv6: false
-  enhanced-mode: fake-ip
-  listen: 0.0.0.0:7895
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7894
   fallback-filter:
     geoip: false
     ipcidr:
@@ -40,40 +41,6 @@ dns:
     - 1.1.1.2
     - 1.0.0.1
     - 1.0.0.2
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-  - "+.*"
-  - ntp7.*.com
-  - ntp6.*.com
-  - ntp5.*.com
-  - ntp4.*.com
-  - ntp3.*.com
-  - ntp2.*.com
-  - ntp1.*.com
-  - ntp.*.com
-  - time7.*.com
-  - time6.*.com
-  - time5.*.com
-  - time4.*.com
-  - time3.*.com
-  - time2.*.com
-  - time1.*.com
-  - time.*.apple.com
-  - time.*.edu.cn
-  - time.*.gov
-  - time.*.com
-  - "*.home.arpa"
-  - "*.local"
-  - "*.test"
-  - "*.localhost"
-  - "*.invalid"
-  - "*.example"
-  - "*.localdomain"
-  - "*.lan"
-tun:
-  enable: true
-  stack: system
-  auto-route: true
 
 proxies:
 - name: "howdyamp30gb23feb"
@@ -385,15 +352,6 @@ rules:
   - DOMAIN-SUFFIX,duckduckgo.com,howdyamp30gb23feb
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
   - DOMAIN-SUFFIX,raw.githubusercontent.com,howdyamp30gb23feb
-  - IP-CIDR,192.168.0.0/16,REJECT,no-resolve
-  - IP-CIDR,10.0.0.0/8,REJECT,no-resolve
-  - IP-CIDR,172.16.0.0/12,REJECT,no-resolve
-  - IP-CIDR,127.0.0.0/8,REJECT,no-resolve
-  - IP-CIDR,100.64.0.0/10,REJECT,no-resolve
-  - IP-CIDR6,::1/128,REJECT,no-resolve
-  - IP-CIDR6,fc00::/7,REJECT,no-resolve
-  - IP-CIDR6,fe80::/10,REJECT,no-resolve
-  - IP-CIDR6,fd00::/8,REJECT,no-resolve
   - DOMAIN-SUFFIX,sg-3.test3.net,DIRECT
   - DOMAIN-SUFFIX,ad.com,REJECT
   - DOMAIN,analytics.google.com,REJECT
@@ -409,7 +367,4 @@ rules:
   - DOMAIN-KEYWORD,adservice,REJECT
   - DOMAIN-KEYWORD,analytics,REJECT
   - DOMAIN-KEYWORD,analysis,REJECT
-  - SRC-IP-CIDR,192.168.1.201/32,REJECT
-  - IP-CIDR,198.18.0.1/16,REJECT,REJECT
-  - GEOIP,IR,REJECT
   - MATCH,All
