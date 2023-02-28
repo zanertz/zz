@@ -288,10 +288,11 @@ proxy-groups:
 - name: Fallback
   type: fallback
   url: 'https://duckduckgo.com'
-  tolerance: 600
-  interval: 20
+  tolerance: 300
+  interval: 10
   use:
   - sall
+  - sall2
 - name: Fallback2
   type: fallback
   url: 'https://duckduckgo.com'
