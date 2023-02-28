@@ -2,6 +2,20 @@ proxies:
 
 ##### Optional server
 
+- name: "AsiaOneTrogo"
+  server: asia1.oceis.net
+  port: 443
+  type: trojan
+  password: f1bddec0-b507-11ed-b230-205c6d5f5d78
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: ws
+  ws-opts:
+   path: /trojanws
+   headers:
+    Host: mobilelegends.com
+  udp: true
+
 - name: "RaceA"
   type: trojan
   server: sg-full.privateip.net
@@ -118,24 +132,7 @@ proxies:
    headers:
     Host: mobilelegends.com
 
-- name: "backserversk1-22jan"
-  server: sg1-v2ray.sshkit.org
-  port: 443
-  type: vmess
-  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-  sni: mobilelegends.com
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-   path: /sshkit/1074999023/63a51672383c8/
-   headers:
-    Host: mobilelegends.com
-
-- name: "backserversk4-23feb"
+- name: "backserversk4-30march"
   server: sg4-v2ray.sshkit.org
   port: 443
   type: vmess
@@ -148,10 +145,9 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /sshkit/1074999023/63cec9036bc6b/
+   path: /sshkit/1074999023/63fd497453494/
    headers:
     Host: mobilelegends.com
-
 
 
 
