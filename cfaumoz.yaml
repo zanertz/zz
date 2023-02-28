@@ -114,6 +114,7 @@ proxy-groups:
   interval: 12
   use:
   - sall
+  - sall2
 - name: SuperRobin3
   type: load-balance
   url: 'https://duckduckgo.com'
@@ -144,8 +145,8 @@ proxy-groups:
   interval: 20
   tolerance: 200
   lazy: true
-  proxies:
-  - Pingb
+  use: 
+  - sall2
 - name: supercharged
   type: url-test
   url: 'https://duckduckgo.com'
@@ -363,6 +364,7 @@ rules:
   - DOMAIN-KEYWORD,tiktokcdn.com,superfastlane
   - DOMAIN-KEYWORD,tiktokv.com,superfastlane
   - DOMAIN-KEYWORD,tiktok.com,superfastlane
+  - DOMAIN-KEYWORD,tiktok,superfastlane
   - DOMAIN-KEYWORD,akamai.net,superfastlane
   - DOMAIN-KEYWORD,akamaiedge.net,superfastlane
   - DOMAIN-KEYWORD,bigo,superfastlane
