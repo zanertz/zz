@@ -337,6 +337,7 @@ rules:
   - DOMAIN-KEYWORD,akamaiedge.net,superfastlane
   - DOMAIN-KEYWORD,bigo,superfastlane
   - DOMAIN-KEYWORD,google,supercharged
+  - DOMAIN-KEYWORD,gstatic,supercharged
   - DOMAIN-KEYWORD,youtube,supercharged
   - DOMAIN-KEYWORD,ytimg,supercharged
   - DOMAIN-KEYWORD,instagram,supercharged
