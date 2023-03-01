@@ -11,15 +11,19 @@ unified-delay: true
 ipv6: false
 profile:
   store-selected: true
+  store-fake-ip: true
 dns:
   enable: true
   ipv6: false
-  enhanced-mode: redir-host
+  enhanced-mode: fake-ip
   listen: 0.0.0.0:7894
   fallback-filter:
     geoip: false
-    ipcidr:
-    - 240.0.0.0/4
+     #ipcidr:
+     #- 240.0.0.0/4
+  fake-ip-filter:
+  - "*.lan"
+  fake-ip-range: 198.18.0.1/16
   default-nameserver:
     - 1.1.1.1
     - 1.1.1.2
@@ -41,6 +45,15 @@ dns:
     - 1.1.1.2
     - 1.0.0.1
     - 1.0.0.2
+tun:
+  enable: true
+  stack: gvisor
+  dns-hijack:
+  - tcp://1.1.1.1:53
+  - tcp://1.1.1.2:53
+experimental:
+  interface-name: en0
+#secret: 123456
 
 proxies:
 - name: "howdyamp30gb23feb"
