@@ -123,7 +123,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 200
+  tolerance: 100
   lazy: true
   use: 
   - sall2
@@ -131,7 +131,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 200
+  tolerance: 100
   lazy: true
   proxies:
   - Manual1
@@ -162,7 +162,7 @@ proxy-groups:
   interval: 24
   strategy: round-robin
   disable-udp: false
-  tolerance: 600
+  tolerance: 100
   lazy: true
   proxies:
   - Pinglb
@@ -173,7 +173,7 @@ proxy-groups:
   interval: 24
   strategy: round-robin
   disable-udp: false
-  tolerance: 600
+  tolerance: 100
   lazy: true
   proxies:
   - Pinglbx
@@ -184,7 +184,7 @@ proxy-groups:
   interval: 24
   strategy: consistent-hashing
   disable-udp: false
-  tolerance: 600
+  tolerance: 100
   lazy: true
   proxies:
   - Pinglb
@@ -195,7 +195,7 @@ proxy-groups:
   interval: 24
   strategy: consistent-hashing
   disable-udp: false
-  tolerance: 600
+  tolerance: 100
   lazy: true
   proxies:
   - Pinglbx
@@ -204,7 +204,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 200
+  tolerance: 50
   lazy: true
   use:
   - sall
@@ -212,7 +212,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 22
-  tolerance: 200
+  tolerance: 50
   lazy: true
   use:
   - sall
@@ -220,7 +220,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 200
+  tolerance: 50
   lazy: true
   use:
   - sall
@@ -228,7 +228,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 22
-  tolerance: 200
+  tolerance: 50
   lazy: true
   use:
   - sall
@@ -236,7 +236,7 @@ proxy-groups:
   type: fallback
   url: 'https://duckduckgo.com'
   interval: 32
-  tolerance: 400
+  tolerance: 50
   lazy: true
   proxies:
   - Manual1
@@ -245,7 +245,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 200
+  tolerance: 50
   lazy: true
   use:
   - sall
@@ -253,7 +253,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 200
+  tolerance: 50
   lazy: true
   use:
   - sall
@@ -261,14 +261,14 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 200
+  tolerance: 50
   lazy: true
   use:
   - sall2
 - name: Fallback
   type: fallback
   url: 'https://duckduckgo.com'
-  tolerance: 300
+  tolerance: 50
   interval: 10
   use:
   - sall
@@ -276,14 +276,14 @@ proxy-groups:
 - name: Fallback2
   type: fallback
   url: 'https://duckduckgo.com'
-  tolerance: 600
+  tolerance: 50
   interval: 20
   use:
   - sall2
 - name: FallbackX
   type: fallback
   url: 'https://duckduckgo.com'
-  tolerance: 420
+  tolerance: 50
   interval: 22
   proxies:
   - Manual2

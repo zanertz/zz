@@ -2,19 +2,17 @@ proxies:
 
 ##### Optional server
 
-- name: "AsiaOneTrogo"
+- name: "AsiaOneTcp"
+  type: trojan
   server: asia1.oceis.net
   port: 443
-  type: trojan
-  password: f1bddec0-b507-11ed-b230-205c6d5f5d78
-  skip-cert-verify: true
-  sni: mobilelegends.com
-  network: ws
-  ws-opts:
-   path: /trojanws
-   headers:
-    Host: mobilelegends.com
+  password: cf2af470-b8f1-11ed-b133-205c6d5f5d78
   udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
 
 - name: "RaceA"
   type: trojan
@@ -80,11 +78,11 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "Fastdyna20feb"
-  server: dynamic-sg2b.obfs.xyz
+- name: "Fastdyna13march"
+  server: dynamic-sg1b.obfs.xyz
   port: 443
   type: vmess
-  uuid: 50adb8a3-6c50-4b28-8f32-2ed698f85a8a
+  uuid: 2d2e3ce6-33d5-4f39-9c7b-a3cf74cb9556
   sni: mobilelegends.com
   alterId: 0
   cipher: auto

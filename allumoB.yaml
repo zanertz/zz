@@ -19,7 +19,7 @@ proxies:
   server: asia1.oceis.net
   port: 443
   type: trojan
-  password: 992ec130-b3f7-11ed-b732-205c6d5f5d78
+  password: 7ab7ea00-b8f1-11ed-b036-205c6d5f5d78
   skip-cert-verify: true
   sni: mobilelegends.com
   network: grpc
