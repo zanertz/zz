@@ -6,7 +6,7 @@ proxies:
   server: sg3.socifiles.com
   port: 443
   type: trojan
-  password: 82987720-b509-11ed-bb06-1239d0255272
+  password: b4cd3790-ba79-11ed-b043-1239d0255272
   skip-cert-verify: true
   sni: mobilelegends.com
   network: grpc
