@@ -105,7 +105,7 @@ proxy-groups:
 - name: FallbackX
   type: fallback
   url: 'https://duckduckgo.com'
-  tolerance: 2000
+  tolerance: 4000
   interval: 20
   lazy: false
   proxies:
@@ -139,7 +139,7 @@ proxy-groups:
 - name: Fallback
   type: fallback
   url: 'https://duckduckgo.com'
-  tolerance: 2000
+  tolerance: 4000
   interval: 20
   lazy: false
   use:
