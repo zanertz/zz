@@ -75,6 +75,7 @@ proxy-groups:
   interval: 500
   proxies:
   - Fallback
+  - FallbackX
   - Manual
   - Manual1
   - Manual2
@@ -101,6 +102,15 @@ proxy-groups:
   interval: 500
   use:
   - sall2
+- name: FallbackX
+  type: fallback
+  url: 'https://duckduckgo.com'
+  tolerance: 2000
+  interval: 20
+  lazy: false
+  proxies:
+  - Manual
+  - Fallback
 - name: superfastlane
   type: url-test
   url: 'https://duckduckgo.com'
@@ -121,7 +131,7 @@ proxy-groups:
 - name: Ping++
   type: url-test
   url: 'https://duckduckgo.com'
-  interval: 30
+  interval: 20
   tolerance: 600
   lazy: false
   use:
@@ -130,19 +140,11 @@ proxy-groups:
   type: fallback
   url: 'https://duckduckgo.com'
   tolerance: 2000
-  interval: 30
+  interval: 20
   lazy: false
   use:
   - sall
   - sall2 
-- name: Fallback2
-  type: fallback
-  url: 'https://duckduckgo.com'
-  tolerance: 2000
-  interval: 30
-  lazy: false
-  use:
-  - sall2
 
 proxy-providers:
   sall:

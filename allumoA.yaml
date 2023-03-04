@@ -2,6 +2,20 @@ proxies:
 
 ##### Optional server
 
+- name: "VpmDo15march"
+  server: sgal1.vpn1.cloud
+  port: 443
+  type: trojan
+  password: b6058df0-abb7-11ed-9a66-cdc46f448286
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: ws
+  ws-opts:
+   path: /trojan
+   headers:
+    Host: mobilelegends.com
+  udp: true
+
 - name: "AsiaOneTcp"
   type: trojan
   server: asia1.oceis.net
@@ -37,20 +51,6 @@ proxies:
      - h2
      - http/1.1
   skip-cert-verify: true
-
-- name: "VpmDo15march"
-  server: sgal1.vpn1.cloud
-  port: 443
-  type: trojan
-  password: b6058df0-abb7-11ed-9a66-cdc46f448286
-  skip-cert-verify: true
-  sni: mobilelegends.com
-  network: ws
-  ws-opts:
-   path: /trojan
-   headers:
-    Host: mobilelegends.com
-  udp: true
 
 - name: "CenterhopeSg2"
   type: trojan
