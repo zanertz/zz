@@ -208,9 +208,8 @@ rules:
   - DOMAIN-KEYWORD,gstatic,supercharged
   - DOMAIN-KEYWORD,youtube,supercharged
   - DOMAIN-KEYWORD,ytimg,supercharged
-  - DOMAIN-KEYWORD,instagram,supercharged
+  - DOMAIN-KEYWORD,instagram,superfastlane
   - DOMAIN-KEYWORD,image,supercharged
-  - DOMAIN-KEYWORD,spotify,supercharged
   - DOMAIN-KEYWORD,rtmp,Fallback
   - DOMAIN-KEYWORD,flv,Fallback
   - DOMAIN-KEYWORD,rtsp,Fallback

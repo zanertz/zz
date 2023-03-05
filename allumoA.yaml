@@ -16,18 +16,6 @@ proxies:
     Host: mobilelegends.com
   udp: true
 
-- name: "AsiaOneTcp"
-  type: trojan
-  server: asia1.oceis.net
-  port: 443
-  password: 94660920-baaa-11ed-b236-205c6d5f5d78
-  udp: true
-  sni: mobilelegends.com
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
 - name: "RaceA"
   type: trojan
   server: sg-full.privateip.net
@@ -57,6 +45,18 @@ proxies:
   server: sg2.socifiles.com
   port: 443
   password: 85020d30-ad0c-11ed-ab9f-1239d0255272
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "AsiaOneTcp"
+  type: trojan
+  server: asia1.oceis.net
+  port: 443
+  password: 94660920-baaa-11ed-b236-205c6d5f5d78
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -96,6 +96,22 @@ proxies:
     Host: mobilelegends.com
 
 ##### fastest server #####
+
+- name: "RaceVGprc1"
+  server: sg-full.privateip.net
+  port: 2003
+  type: vless
+  uuid: e7aa0ad8-89a4-49c6-aafb-32ae6f82d5da
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: mobilelegends.com
+  sni: mobilelegends.com
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: grpc
+  udp: true
 
 - name: "TrogprcOvh"
   server: sg1.socifiles.com

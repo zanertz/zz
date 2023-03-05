@@ -16,18 +16,6 @@ proxies:
     Host: mm.net.my
   udp: true
 
-- name: "AsiaOneTcp"
-  type: trojan
-  server: ulist.com.my.asia1.oceis.net
-  port: 443
-  password: 94660920-baaa-11ed-b236-205c6d5f5d78
-  udp: true
-  sni: mm.net.my
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
 - name: "RaceA"
   type: trojan
   server: ulist.com.my.sg-full.privateip.net
@@ -64,6 +52,18 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
+- name: "AsiaOneTcp"
+  type: trojan
+  server: ulist.com.my.asia1.oceis.net
+  port: 443
+  password: 94660920-baaa-11ed-b236-205c6d5f5d78
+  udp: true
+  sni: mm.net.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
 ##### Timed server #####
 
 - name: "HowdyUdp2Do22feb"
@@ -79,11 +79,11 @@ proxies:
   skip-cert-verify: true
 
 - name: "Fastdyna13march"
-  server: dynamic-sg1b.obfs.xyz
+  server: ulist.com.my.dynamic-sg1b.obfs.xyz
   port: 443
   type: vmess
   uuid: 2d2e3ce6-33d5-4f39-9c7b-a3cf74cb9556
-  sni: mobilelegends.com
+  sni: mm.net.my
   alterId: 0
   cipher: auto
   tls: true
@@ -93,9 +93,25 @@ proxies:
   ws-opts:
    path: /worryfree
    headers:
-    Host: mobilelegends.com
+    Host: mm.net.my
 
 ##### fastest server #####
+
+- name: "RaceVGprc1"
+  server: ulist.com.my.sg-full.privateip.net
+  port: 2003
+  type: vless
+  uuid: e7aa0ad8-89a4-49c6-aafb-32ae6f82d5da
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: mm.net.my
+  sni: mm.net.my
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: grpc
+  udp: true
 
 - name: "TrogprcOvh"
   server: sg1.socifiles.com
