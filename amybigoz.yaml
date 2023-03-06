@@ -17,6 +17,20 @@ proxies:
    headers:
     Host: mobilelegends.com
 
+- name: "VpfmMy"
+  server: myal2.vpn1.cloud
+  port: 443
+  type: trojan
+  password: 6a2edc70-bbca-11ed-a250-f56c40e26e6e
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: ws
+  ws-opts:
+   path: /trojan
+   headers:
+    Host: mobilelegends.com
+  udp: true
+
 - name: "backserverjantit"
   server: my4.vpnjantit.com
   port: 10001
