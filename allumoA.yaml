@@ -2,6 +2,20 @@ proxies:
 
 ##### Optional server
 
+- name: "Vstunnel"
+  server: xray.vpnstunnel.me
+  port: 443
+  type: trojan
+  password: f2b98d53-8eef-4c35-bae2-aaebd439a1f9
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: ws
+  ws-opts:
+   path: /trojan
+   headers:
+    Host: mobilelegends.com
+  udp: true
+
 - name: "VpmDo15march"
   server: sgal1.vpn1.cloud
   port: 443
@@ -32,7 +46,7 @@ proxies:
   type: trojan
   server: sg2-full.privateip.net
   port: 443
-  password: b7aa85ad-10be-45d4-9ea0-9fee21b7831c
+  password: 3c050275-f2e4-44ae-9d7d-91733b580018
   udp: true
   sni: mobilelegends.com
   alpn:
