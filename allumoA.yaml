@@ -2,6 +2,20 @@ proxies:
 
 ##### Optional server
 
+- name: "VstunnelDo"
+  server: ray.vpnstunnel.me
+  port: 443
+  type: trojan
+  password: 6a881510-7b3b-49a5-b276-9b0819cd804b
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: ws
+  ws-opts:
+   path: /trojan
+   headers:
+    Host: mobilelegends.com
+  udp: true
+
 - name: "Vstunnel"
   server: xray.vpnstunnel.me
   port: 443
