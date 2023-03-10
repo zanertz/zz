@@ -2,34 +2,6 @@ proxies:
 
 ##### Optional server
 
-- name: "VstunnelDo"
-  server: ray.vpnstunnel.me
-  port: 443
-  type: trojan
-  password: 6a881510-7b3b-49a5-b276-9b0819cd804b
-  skip-cert-verify: true
-  sni: mobilelegends.com
-  network: ws
-  ws-opts:
-   path: /trojan
-   headers:
-    Host: mobilelegends.com
-  udp: true
-
-- name: "Vstunnel"
-  server: xray.vpnstunnel.me
-  port: 443
-  type: trojan
-  password: f2b98d53-8eef-4c35-bae2-aaebd439a1f9
-  skip-cert-verify: true
-  sni: mobilelegends.com
-  network: ws
-  ws-opts:
-   path: /trojan
-   headers:
-    Host: mobilelegends.com
-  udp: true
-
 - name: "VpmDo15march"
   server: sgal1.vpn1.cloud
   port: 443
@@ -84,13 +56,41 @@ proxies:
   type: trojan
   server: asia1.oceis.net
   port: 443
-  password: 94660920-baaa-11ed-b236-205c6d5f5d78
+  password: 8c39d570-bf58-11ed-b337-205c6d5f5d78
   udp: true
   sni: mobilelegends.com
   alpn:
      - h2
      - http/1.1
   skip-cert-verify: true
+
+- name: "VstunnelDo"
+  server: ray.vpnstunnel.me
+  port: 443
+  type: trojan
+  password: 6a881510-7b3b-49a5-b276-9b0819cd804b
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: ws
+  ws-opts:
+   path: /trojan
+   headers:
+    Host: mobilelegends.com
+  udp: true
+
+- name: "Vstunnel"
+  server: xray.vpnstunnel.me
+  port: 443
+  type: trojan
+  password: f2b98d53-8eef-4c35-bae2-aaebd439a1f9
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: ws
+  ws-opts:
+   path: /trojan
+   headers:
+    Host: mobilelegends.com
+  udp: true
 
 ##### Timed server #####
 
