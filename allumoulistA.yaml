@@ -2,6 +2,18 @@ proxies:
 
 ##### Optional server
 
+- name: "HowdyUdp2Do25March"
+  type: trojan
+  server: ulist.com.my.troh2.merutd.cloudns.nz
+  port: 443
+  password: 445e54a0-c024-11ed-ac0c-1239d0255272
+  udp: true
+  sni: mm.net.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
 - name: "VpmDo15march"
   server: ulist.com.my.sg2.sgal1.vpn1.cloud
   port: 443
@@ -77,18 +89,6 @@ proxies:
   skip-cert-verify: true
 
 ##### Timed server #####
-
-- name: "HowdyUdp2Do22feb"
-  type: trojan
-  server: ulist.com.my.trojh1.merutd.cloudns.nz
-  port: 443
-  password: e6430f20-a868-11ed-a388-1239d0255272
-  udp: true
-  sni: mm.net.my
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
 
 - name: "Fastdyna13march"
   server: ulist.com.my.dynamic-sg1b.obfs.xyz

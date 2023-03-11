@@ -2,6 +2,18 @@ proxies:
 
 ##### Optional server
 
+- name: "HowdyUdp2Do25March"
+  type: trojan
+  server: trojan2.udpgw.com
+  port: 443
+  password: 445e54a0-c024-11ed-ac0c-1239d0255272
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
 - name: "VpmDo15march"
   server: sgal1.vpn1.cloud
   port: 443
@@ -77,18 +89,6 @@ proxies:
   skip-cert-verify: true
 
 ##### Timed server #####
-
-- name: "HowdyUdp2Do22feb"
-  type: trojan
-  server: trojan2.udpgw.com
-  port: 443
-  password: e6430f20-a868-11ed-a388-1239d0255272
-  udp: true
-  sni: mobilelegends.com
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
 
 - name: "Fastdyna13march"
   server: dynamic-sg1b.obfs.xyz
