@@ -64,33 +64,17 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "VstunnelDo"
-  server: ray.vpnstunnel.me
-  port: 443
+- name: "OvhObs"
   type: trojan
-  password: 6a881510-7b3b-49a5-b276-9b0819cd804b
-  skip-cert-verify: true
-  sni: mobilelegends.com
-  network: ws
-  ws-opts:
-   path: /trojan
-   headers:
-    Host: mobilelegends.com
-  udp: true
-
-- name: "Vstunnel"
-  server: xray.vpnstunnel.me
+  server: sg3.socifiles.com
   port: 443
-  type: trojan
-  password: f2b98d53-8eef-4c35-bae2-aaebd439a1f9
-  skip-cert-verify: true
-  sni: mobilelegends.com
-  network: ws
-  ws-opts:
-   path: /trojan
-   headers:
-    Host: mobilelegends.com
+  password: ac6088f0-bfa3-11ed-bb05-1239d0255272
   udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
 
 ##### Timed server #####
 
