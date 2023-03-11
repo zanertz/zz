@@ -80,6 +80,13 @@ proxy-providers:
 rules:
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
   - DOMAIN-SUFFIX,raw.githubusercontent.com,DIRECT
+  - DOMAIN-KEYWORD,vpnjantit.com,DIRECT
+  - DOMAIN-KEYWORD,vpnjantit,DIRECT
+  - DOMAIN-KEYWORD,v2rayserv.com,DIRECT
+  - DOMAIN-KEYWORD,v2rayserv,DIRECT
+  - DOMAIN-KEYWORD,myal,DIRECT
+  - DOMAIN-KEYWORD,cloud,DIRECT
+  - DOMAIN-KEYWORD,my,DIRECT
   - IP-CIDR,192.168.0.0/16,REJECT,no-resolve
   - IP-CIDR,10.0.0.0/8,REJECT,no-resolve
   - IP-CIDR,172.16.0.0/12,REJECT,no-resolve
