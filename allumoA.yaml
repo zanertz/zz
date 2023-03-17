@@ -78,7 +78,7 @@ proxies:
 
 - name: "OvhObfs"
   type: trojan
-  server: sg3.socifiles.com
+  server: sg1.socifiles.com
   port: 443
   password: 70a7bcb0-c45b-11ed-bf0f-1239d0255272
   udp: true
