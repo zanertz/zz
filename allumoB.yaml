@@ -2,11 +2,11 @@ proxies:
 
 ##### fastest server #####
 
-- name: "HRObs"
+- name: "HRObfs"
   type: trojan
   server: sg1.socifiles.com
   port: 443
-  password: d0e6ef10-bfa3-11ed-a7ab-1239d0255272
+  password: 459926a0-c45b-11ed-b4c7-1239d0255272
   udp: true
   sni: mobilelegends.com
   alpn:

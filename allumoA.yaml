@@ -2,6 +2,30 @@ proxies:
 
 ##### Optional server
 
+- name: "RaceA"
+  type: trojan
+  server: sg-full.privateip.net
+  port: 443
+  password: d60f467e-deb7-4426-8583-46d53a599928
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "RaceB"
+  type: trojan
+  server: sg2-full.privateip.net
+  port: 443
+  password: 338fd0e5-32bd-43cf-b5f1-36a81fd36029
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
 - name: "HowdyUdp2Do25March"
   type: trojan
   server: trojan2.udpgw.com
@@ -28,30 +52,6 @@ proxies:
     Host: mobilelegends.com
   udp: true
 
-- name: "RaceA"
-  type: trojan
-  server: sg-full.privateip.net
-  port: 443
-  password: 1308515a-743d-4312-9412-07a513093979
-  udp: true
-  sni: mobilelegends.com
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
-- name: "RaceB"
-  type: trojan
-  server: sg2-full.privateip.net
-  port: 443
-  password: 3c050275-f2e4-44ae-9d7d-91733b580018
-  udp: true
-  sni: mobilelegends.com
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
 - name: "CenterhopeSg2"
   type: trojan
   server: sg2.socifiles.com
@@ -76,11 +76,11 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "OvhObs"
+- name: "OvhObfs"
   type: trojan
   server: sg3.socifiles.com
   port: 443
-  password: ac6088f0-bfa3-11ed-bb05-1239d0255272
+  password: 70a7bcb0-c45b-11ed-bf0f-1239d0255272
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -90,11 +90,11 @@ proxies:
 
 ##### Timed server #####
 
-- name: "Fastdyna13march"
-  server: dynamic-sg1b.obfs.xyz
+- name: "Fastdyna27march"
+  server: dynamic-sg2b.obfs.xyz
   port: 443
   type: vmess
-  uuid: 2d2e3ce6-33d5-4f39-9c7b-a3cf74cb9556
+  uuid: 8a1824b5-a2bd-4093-a0f6-47e916ba96c5
   sni: mobilelegends.com
   alterId: 0
   cipher: auto
