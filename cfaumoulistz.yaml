@@ -1,29 +1,24 @@
 port: 7890
 socks-port: 7891
 redir-port: 7892
-mixed-port: 7893
+tproxy-port: 7893
+mixed-port: 7894
+allow-lan: true
 mode: rule
 log-level: info
-allow-lan: true
-external-controller: 0.0.0.0:9090
-bind-address: "*"
-unified-delay: true
 ipv6: false
-profile:
-  store-selected: true
-  store-fake-ip: true
+external-controller: 127.0.0.1:9090
+external-ui: folder
+interface-name: en0
 dns:
   enable: true
   ipv6: false
   enhanced-mode: fake-ip
-  listen: 0.0.0.0:7894
+  listen: 0.0.0.0:7895
   fallback-filter:
     geoip: false
-     #ipcidr:
-     #- 240.0.0.0/4
-  fake-ip-filter:
-  - "*.lan"
-  fake-ip-range: 198.18.0.1/16
+    ipcidr:
+    - 240.0.0.0/4
   default-nameserver:
     - 1.1.1.1
     - 1.1.1.2
@@ -45,15 +40,43 @@ dns:
     - 1.1.1.2
     - 1.0.0.1
     - 1.0.0.2
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - "+.*"
+  - ntp7.*.com
+  - ntp6.*.com
+  - ntp5.*.com
+  - ntp4.*.com
+  - ntp3.*.com
+  - ntp2.*.com
+  - ntp1.*.com
+  - ntp.*.com
+  - time7.*.com
+  - time6.*.com
+  - time5.*.com
+  - time4.*.com
+  - time3.*.com
+  - time2.*.com
+  - time1.*.com
+  - time.*.apple.com
+  - time.*.edu.cn
+  - time.*.gov
+  - time.*.com
+  - "*.home.arpa"
+  - "*.local"
+  - "*.test"
+  - "*.localhost"
+  - "*.invalid"
+  - "*.example"
+  - "*.localdomain"
+  - "*.lan"
 tun:
-  enable: false
-  stack: system
+  enable: true
   dns-hijack:
   - tcp://1.1.1.1:53
   - tcp://1.1.1.2:53
-experimental:
-  interface-name: en0
-#secret: 123456
+  stack: system
+  auto-route: true
 
 proxies:
 - name: "howdyamp30gb23feb"
@@ -105,7 +128,7 @@ proxy-groups:
 - name: FallbackX
   type: fallback
   url: 'https://duckduckgo.com'
-  tolerance: 10000
+  tolerance: 5000
   interval: 20
   lazy: false
   proxies:
@@ -115,7 +138,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 62
-  tolerance: 500
+  tolerance: 620
   lazy: false
   use: 
   - sall2
@@ -123,7 +146,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 62
-  tolerance: 500
+  tolerance: 620
   lazy: false
   proxies:
   - Manual1
@@ -132,14 +155,14 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 62
-  tolerance: 500
+  tolerance: 620
   lazy: false
   use:
   - sall
 - name: Fallback
   type: fallback
   url: 'https://duckduckgo.com'
-  tolerance: 10000
+  tolerance: 5000
   interval: 20
   lazy: false
   use:
