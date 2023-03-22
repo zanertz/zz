@@ -66,7 +66,7 @@ proxies:
 
 - name: "AsiaOneTcp"
   type: trojan
-  server: asia1.oceis.net
+  server: asia1.oceis.netyyy
   port: 443
   password: 3ed2ef00-c698-11ed-b833-205c6d5f5d78
   udp: true
@@ -125,11 +125,24 @@ proxies:
     grpc-service-name: grpc
   udp: true
 
+- name: "TrogprcSgOne"
+  server: asia1.oceis.net
+  port: 443
+  type: trojan
+  password: bae568a0-c849-11ed-b430-205c6d5f5d78
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: grpc
+  grpc-opts:
+   grpc-mode: gun
+   grpc-service-name: trgrpc
+  udp: true
+
 - name: "TrogprcOvh"
   server: sg1.socifiles.com
   port: 443
   type: trojan
-  password: fc1417d0-ba79-11ed-9aca-1239d0255272
+  password: 1c788980-c84a-11ed-8b9d-1239d0255272
   skip-cert-verify: true
   sni: mobilelegends.com
   network: grpc

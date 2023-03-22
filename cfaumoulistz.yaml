@@ -135,18 +135,18 @@ proxy-groups:
   - Manual
   - Fallback
 - name: superfastlane
-  type: url-test
+  type: fallback
   url: 'https://duckduckgo.com'
-  interval: 62
-  tolerance: 620
+  tolerance: 5000
+  interval: 20
   lazy: false
   use: 
   - sall2
 - name: supercharged
-  type: url-test
+  type: fallback
   url: 'https://duckduckgo.com'
-  interval: 62
-  tolerance: 620
+  tolerance: 5000
+  interval: 20
   lazy: false
   proxies:
   - Manual1
@@ -207,6 +207,7 @@ rules:
   - DOMAIN-SUFFIX,static.f2ecdn.com,superfastlane
   - DOMAIN-SUFFIX,support1.like.video,superfastlane
   - DOMAIN-SUFFIX,esx.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,esx.bigo.sg,superfastlane
   - DOMAIN-SUFFIX,firebaseremoteconfig.googleapis.com,superfastlane
   - DOMAIN-SUFFIX,static-fed.bigolive.tv,superfastlane
   - DOMAIN-SUFFIX,static-web.bigolive.tv,superfastlane
