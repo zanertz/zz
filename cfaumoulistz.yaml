@@ -79,11 +79,11 @@ tun:
   auto-route: true
 
 proxies:
-- name: "howdyamp30gb23feb"
+- name: "howdyCanada20gb23march"
   type: trojan
-  server: sg-2.test3.net
+  server: api.whatsapp.com.ca-trojan.bonds.id
   port: 443
-  password: 93ab7ad0-b2cb-11ed-be66-1239d0255272
+  password: 57cd8250-c922-11ed-8bba-1239d0255272
   udp: true
   sni: whatsapp.com
   alpn:
