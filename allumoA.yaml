@@ -52,11 +52,11 @@ proxies:
     Host: mobilelegends.com
   udp: true
 
-- name: "CenterhopeSg2"
+- name: "WhySg1"
   type: trojan
-  server: sg2.socifiles.com
+  server: sg1.kitu.xyz
   port: 443
-  password: 85020d30-ad0c-11ed-ab9f-1239d0255272
+  password: whyvpn-kollojgyu
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -109,20 +109,17 @@ proxies:
 
 ##### fastest server #####
 
-- name: "RaceVGprc1"
-  server: sg-full.privateip.net
-  port: 2003
-  type: vless
-  uuid: e7aa0ad8-89a4-49c6-aafb-32ae6f82d5da
-  cipher: auto
-  tls: true
+- name: "WhyGprcSg1"
+  server: sg1.kitu.xyz
+  port: 443
+  type: trojan
+  password: d344c894-967b-470e-a665-0ed3d171d26e
   skip-cert-verify: true
-  servername: mobilelegends.com
   sni: mobilelegends.com
   network: grpc
   grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: grpc
+   grpc-mode: gun
+   grpc-service-name: xray-trojan-grpc
   udp: true
 
 - name: "TrogprcSgOne"
