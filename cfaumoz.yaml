@@ -234,9 +234,9 @@ rules:
   - DOMAIN-KEYWORD,ytimg,supercharged
   - DOMAIN-KEYWORD,instagram,superfastlane
   - DOMAIN-KEYWORD,image,supercharged
-  - DOMAIN-SUFFIX,duckduckgo.com,howdyamp30gb23feb
+  - DOMAIN-SUFFIX,duckduckgo.com,howdyCanada20gb23march
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
-  - DOMAIN-SUFFIX,raw.githubusercontent.com,howdyamp30gb23feb
+  - DOMAIN-SUFFIX,raw.githubusercontent.com,howdyCanada20gb23march
   - DOMAIN-SUFFIX,sg-3.test3.net,DIRECT
   - DOMAIN-SUFFIX,ad.com,REJECT
   - DOMAIN,analytics.google.com,REJECT
