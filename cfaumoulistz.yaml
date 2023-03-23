@@ -192,6 +192,10 @@ proxy-providers:
       url: https://duckduckgo.com
 
 rules:
+  - IP-CIDR,47.254.192.14/32,howdyCanada20gb23march
+  - IP-CIDR,47.254.250.25/32,howdyCanada20gb23march
+  - IP-CIDR,47.254.230.116/32,howdyCanada20gb23march
+  - IP-CIDR,47.254.192.234/32,howdyCanada20gb23march
   - DOMAIN-SUFFIX,support1.like.video,superfastlane
   - DOMAIN-SUFFIX,gdl.bigo.sg,superfastlane
   - DOMAIN-SUFFIX,activity.bigo.tv,superfastlane
