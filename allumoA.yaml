@@ -6,7 +6,7 @@ proxies:
   type: trojan
   server: sg-full.privateip.net
   port: 443
-  password: 42875655-3816-4b8e-b046-b5e2a2e9e510
+  password: 55965044-daae-4d4b-acd2-ecf9e52c86ab
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -18,7 +18,7 @@ proxies:
   type: trojan
   server: sg2-full.privateip.net
   port: 443
-  password: 8ff5228e-e4f0-4b38-953d-a3743697c0ec
+  password: a91c42cc-6fd1-4ba3-b895-cc0a57b5ca57
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -126,7 +126,7 @@ proxies:
   server: asia1.oceis.net
   port: 443
   type: trojan
-  password: bae568a0-c849-11ed-b430-205c6d5f5d78
+  password: 081104e0-c9f1-11ed-b636-205c6d5f5d78
   skip-cert-verify: true
   sni: mobilelegends.com
   network: grpc
