@@ -114,6 +114,13 @@ proxy-groups:
   use:
   - sall
   - sall2
+- name: Manualx
+  type: select
+  url: 'https://duckduckgo.com'
+  interval: 500
+  use:
+  - sall
+  - sall2
 - name: Manual1
   type: select
   url: 'https://duckduckgo.com'
@@ -129,10 +136,10 @@ proxy-groups:
 - name: RobinZ
   type: load-balance
   url: 'https://duckduckgo.com'
-  interval: 24
+  #interval: 24
   strategy: round-robin
   disable-udp: false
-  tolerance: 5000
+  #tolerance: 5000
   lazy: false
   proxies:
   - FallbackX
