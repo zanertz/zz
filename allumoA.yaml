@@ -6,7 +6,7 @@ proxies:
   type: trojan
   server: sg-full.privateip.net
   port: 443
-  password: 55965044-daae-4d4b-acd2-ecf9e52c86ab
+  password: e857b511-7dc3-4b27-a995-2d072d8a6157
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -18,7 +18,7 @@ proxies:
   type: trojan
   server: sg2-full.privateip.net
   port: 443
-  password: a91c42cc-6fd1-4ba3-b895-cc0a57b5ca57
+  password: 83a30e9d-4ca3-46a4-b174-3da3490b8eb7
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -26,11 +26,11 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "HowdyUdp2Do25March"
+- name: "HowdyUdp3sg5apr"
   type: trojan
-  server: trojan2.udpgw.com
+  server: trojan3.udpgw.com
   port: 443
-  password: 445e54a0-c024-11ed-ac0c-1239d0255272
+  password: a77b7790-cda9-11ed-89a8-1239d0255272
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -113,7 +113,7 @@ proxies:
   server: sg1.kitu.xyz
   port: 443
   type: trojan
-  password: d344c894-967b-470e-a665-0ed3d171d26e
+  password: 58532291-fd8d-4521-892c-f2e4ed89e1d5
   skip-cert-verify: true
   sni: mobilelegends.com
   network: grpc
@@ -123,10 +123,10 @@ proxies:
   udp: true
 
 - name: "TrogprcSgOne"
-  server: asia1.oceis.net
+  server: asia1.oceis.netyyy
   port: 443
   type: trojan
-  password: 081104e0-c9f1-11ed-b636-205c6d5f5d78
+  password: 91dfac70-cdab-11ed-b436-205c6d5f5d78
   skip-cert-verify: true
   sni: mobilelegends.com
   network: grpc
