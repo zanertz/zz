@@ -101,6 +101,7 @@ proxy-groups:
   - Fallback
   - FallbackX
   - Manual
+  - Manualx
   - Manual1
   - Manual2
   - superfastlane
@@ -136,10 +137,10 @@ proxy-groups:
 - name: RobinZ
   type: load-balance
   url: 'https://duckduckgo.com'
-  #interval: 24
-  strategy: round-robin
+  interval: 32
+  strategy: consistent-hashing
   disable-udp: false
-  #tolerance: 5000
+  tolerance: 600
   lazy: false
   proxies:
   - FallbackX
@@ -160,8 +161,8 @@ proxy-groups:
   interval: 72
   lazy: false
   proxies:
-  - Manual
-  - Ping++
+  - Manualx
+  - Fallback
 - name: superfastlane
   type: fallback
   url: 'https://duckduckgo.com'
