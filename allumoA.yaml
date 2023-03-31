@@ -168,7 +168,7 @@ proxies:
    headers:
     Host: mobilelegends.com
 
-- name: "backserversk4-30march"
+- name: "backserversk4-30apr"
   server: sg4-v2ray.sshkit.org
   port: 443
   type: vmess
@@ -181,7 +181,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /sshkit/1074999023/63fd497453494/
+   path: /sshkit/1074999023/6426feafd6e2a/
    headers:
     Host: mobilelegends.com
 
