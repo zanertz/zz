@@ -2,6 +2,18 @@ proxies:
 
 ##### fastest server #####
 
+- name: "DoGprcSg"
+  type: trojan
+  server: sg3.kitu.xyz
+  port: 443
+  password: 7213b921-a559-4199-b40b-f6867c8152ce
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
 - name: "TrogprcSgOne"
   server: asia1.oceis.net
   port: 443
@@ -14,18 +26,6 @@ proxies:
    grpc-mode: gun
    grpc-service-name: trgrpc
   udp: true
-
-- name: "HRObfsSg3"
-  type: trojan
-  server: sg3.socifiles.comyyy
-  port: 443
-  password: d5872d30-cdab-11ed-ba84-1239d0255272
-  udp: true
-  sni: mobilelegends.com
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
 
 - name: "TrogprcHR"
   server: sg3.socifiles.com

@@ -113,7 +113,7 @@ proxies:
   server: ulist.com.my.sg1.kitu.xyz
   port: 443
   type: trojan
-  password: 58532291-fd8d-4521-892c-f2e4ed89e1d5
+  password: f6c4b48d-fedf-4800-93f2-4f32df9aea5b
   skip-cert-verify: true
   sni: mm.net.my
   network: grpc

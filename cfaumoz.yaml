@@ -128,11 +128,13 @@ proxy-groups:
   interval: 500
   use:
   - sall
+  - sall2
 - name: Manual2
   type: select
   url: 'https://duckduckgo.com'
   interval: 500
   use:
+  - sall
   - sall2
 - name: RobinZ
   type: load-balance
