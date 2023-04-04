@@ -32,10 +32,10 @@ proxies:
   udp: true
 
 - name: "backserverjantit"
-  server: my2.vpnjantit.com
+  server: my4.vpnjantit.com
   port: 10001
   type: vmess
-  uuid: de3dffa0-d0f1-11ed-9aa8-00163e005b89
+  uuid: 12e04d20-d32d-11ed-a69a-00163e006a08
   sni: mobilelegends.com
   alterId: 0
   cipher: auto
