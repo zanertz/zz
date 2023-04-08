@@ -35,7 +35,7 @@ proxies:
   server: my4.vpnjantit.com
   port: 10001
   type: vmess
-  uuid: 8cc4101a-d49d-11ed-b082-00163e006a08
+  uuid: 64a38bbc-d658-11ed-b316-00163e006a08
   sni: mobilelegends.com
   alterId: 0
   cipher: auto

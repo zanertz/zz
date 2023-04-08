@@ -6,7 +6,7 @@ proxies:
   server: sg3.kitu.xyz
   port: 443
   type: trojan
-  password: 7213b921-a559-4199-b40b-f6867c8152ce
+  password: ba98aa90-5c2c-4e51-a38c-edfe8d52fcc7
   skip-cert-verify: true
   sni: mobilelegends.com
   network: grpc
