@@ -3,10 +3,10 @@ proxies:
 ##### fastest server #####
 
 - name: "DoGprcSg3"
-  server: sg3.kitu.xyz
+  server: sg1.kitu.xyz
   port: 443
   type: trojan
-  password: 02ee9fd2-4ab8-4374-be6f-22959d7d7ca3
+  password: 1012253a-5ebf-4b68-87f3-39c7f1d03f86
   skip-cert-verify: true
   sni: mobilelegends.com
   network: grpc
