@@ -2,7 +2,7 @@ proxies:
 
 ##### fastest server #####
 
-- name: "LionDocean"
+- name: "LionDoceanGprc"
   server: tr.sg.goserver.pw
   port: 443
   type: trojan
@@ -11,7 +11,7 @@ proxies:
   sni: mobilelegends.com
   network: grpc
   grpc-opts:
-   grpc-mode: gun
+   grpc-mode: multi
    grpc-service-name: /xray-trojan/grpc
   udp: true
 
@@ -24,7 +24,7 @@ proxies:
   sni: mobilelegends.com
   network: grpc
   grpc-opts:
-   grpc-mode: gun
+   grpc-mode: multi
    grpc-service-name: trgrpc
   udp: true
 
@@ -37,7 +37,7 @@ proxies:
   sni: mobilelegends.com
   network: grpc
   grpc-opts:
-   grpc-mode: gun
+   grpc-mode: multi
    grpc-service-name: xray-trojan-grpc
   udp: true
 
@@ -50,7 +50,7 @@ proxies:
   sni: mobilelegends.com
   network: grpc
   grpc-opts:
-   grpc-mode: gun
+   grpc-mode: multi
    grpc-service-name: trgrpc
   udp: true
 
@@ -63,7 +63,7 @@ proxies:
   sni: mobilelegends.com
   network: grpc
   grpc-opts:
-   grpc-mode: gun
+   grpc-mode: multi
    grpc-service-name: trgrpc
   udp: true
 
