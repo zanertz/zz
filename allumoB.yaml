@@ -2,6 +2,19 @@ proxies:
 
 ##### fastest server #####
 
+- name: "LionDocean"
+  server: tr.sg.goserver.pw
+  port: 443
+  type: trojan
+  password: 22f8e284-090b-4ae6-a009-cfabbf5f6f82
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: grpc
+  grpc-opts:
+   grpc-mode: gun
+   grpc-service-name: /xray-trojan/grpc
+  udp: true
+
 - name: "TrogprcSgOne"
   server: asia1.oceis.net
   port: 443
@@ -15,7 +28,7 @@ proxies:
    grpc-service-name: trgrpc
   udp: true
 
-- name: "DoGprcSg3"
+- name: "SgIndoVps"
   server: sg1.kitu.xyz
   port: 443
   type: trojan
