@@ -2,6 +2,19 @@ proxies:
 
 ##### fastest server #####
 
+- name: "TrogprcOvh1"
+  server: sg1.socifiles.com
+  port: 443
+  type: trojan
+  password: f16926c0-dbdf-11ed-b39a-1239d0255272
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: grpc
+  grpc-opts:
+   grpc-mode: multi
+   grpc-service-name: trgrpc
+  udp: true
+
 - name: "LionDoceanGprc"
   server: tr.sg.goserver.pw
   port: 443
@@ -46,19 +59,6 @@ proxies:
   port: 443
   type: trojan
   password: d5872d30-cdab-11ed-ba84-1239d0255272
-  skip-cert-verify: true
-  sni: mobilelegends.com
-  network: grpc
-  grpc-opts:
-   grpc-mode: multi
-   grpc-service-name: trgrpc
-  udp: true
-
-- name: "TrogprcOvh1"
-  server: sg1.socifiles.com
-  port: 443
-  type: trojan
-  password: f16926c0-dbdf-11ed-b39a-1239d0255272
   skip-cert-verify: true
   sni: mobilelegends.com
   network: grpc
