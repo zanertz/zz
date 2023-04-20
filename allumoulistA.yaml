@@ -2,6 +2,20 @@ proxies:
 
 ##### Optional server
 
+- name: "HowdyUdp1"
+  server: ulist.com.my.troh1.merutd.cloudns.nz
+  port: 443
+  type: trojan
+  password: 25d3c070-def5-11ed-94f7-1239d0255272
+  skip-cert-verify: true
+  sni: mm.net.my
+  network: ws
+  ws-opts:
+   path: /howdy
+   headers:
+    Host: mm.net.my
+  udp: true
+
 - name: "RaceA"
   type: trojan
   server: ulist.com.my.sg-full.privateip.net
@@ -26,32 +40,6 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "HowdyUdp5apr"
-  type: trojan
-  server: ulist.com.my.troh3.merutd.cloudns.nz
-  port: 443
-  password: a77b7790-cda9-11ed-89a8-1239d0255272
-  udp: true
-  sni: mm.net.my
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
-- name: "VpmDo15march"
-  server: ulist.com.my.sg2.sgal1.vpn1.cloud
-  port: 443
-  type: trojan
-  password: b6058df0-abb7-11ed-9a66-cdc46f448286
-  skip-cert-verify: true
-  sni: mm.net.my
-  network: ws
-  ws-opts:
-   path: /trojan
-   headers:
-    Host: mm.net.my
-  udp: true
-
 - name: "WhySg1"
   type: trojan
   server: ulist.com.my.sg1.kitu.xyz
@@ -68,7 +56,7 @@ proxies:
   server: ulist.com.my.lion1.merutd.cloudns.nz
   port: 443
   type: trojan
-  password: 22f8e284-090b-4ae6-a009-cfabbf5f6f82
+  password: dec5afcf-f3bc-44ef-ae3d-7789b9a38c4f
   skip-cert-verify: true
   sni: mobilelegends.com
   network: ws
