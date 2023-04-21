@@ -37,18 +37,16 @@ proxies:
     Host: mm.net.my
 
 - name: "HowdyUdp1"
+  type: trojan
   server: ulist.com.my.troh1.merutd.cloudns.nz
   port: 443
-  type: trojan
   password: 293d6b90-e088-11ed-b710-1239d0255272
-  skip-cert-verify: true
-  sni: mm.net.my
-  network: ws
-  ws-opts:
-   path: /howdy
-   headers:
-    Host: mm.net.my
   udp: true
+  sni: mm.net.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
 
 - name: "RaceA"
   type: trojan

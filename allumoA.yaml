@@ -37,18 +37,16 @@ proxies:
     Host: mobilelegends.com
 
 - name: "HowdyUdp1"
+  type: trojan
   server: trojan1.udpgw.com
   port: 443
-  type: trojan
   password: 293d6b90-e088-11ed-b710-1239d0255272
-  skip-cert-verify: true
-  sni: mobilelegends.com
-  network: ws
-  ws-opts:
-   path: /howdy
-   headers:
-    Host: mobilelegends.com
   udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
 
 - name: "RaceA"
   type: trojan
