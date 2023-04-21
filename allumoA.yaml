@@ -2,11 +2,45 @@ proxies:
 
 ##### Optional server
 
+- name: "OpenSg1"
+  server: sgv-5.openv2ray.com
+  port: 443
+  type: vmess
+  uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /u/opentunnel.net-selsemq9
+   headers:
+    Host: mobilelegends.com
+
+- name: "OpenSg2"
+  server: sgv-6.openv2ray.com
+  port: 443
+  type: vmess
+  uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /u/opentunnel.net-crosifhf4
+   headers:
+    Host: mobilelegends.com
+
 - name: "HowdyUdp1"
   server: trojan1.udpgw.com
   port: 443
   type: trojan
-  password: 25d3c070-def5-11ed-94f7-1239d0255272
+  password: 293d6b90-e088-11ed-b710-1239d0255272
   skip-cert-verify: true
   sni: mobilelegends.com
   network: ws
@@ -65,23 +99,6 @@ proxies:
    headers:
     Host: mobilelegends.com
   udp: true
-
-- name: "OpenSg2"
-  server: sgv-6.openv2ray.com
-  port: 443
-  type: vmess
-  uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-  sni: mobilelegends.com
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-   path: /u/opentunnel.net-crosifhf4
-   headers:
-    Host: mobilelegends.com
 
 - name: "AsiaOneTcp"
   type: trojan
