@@ -2,6 +2,21 @@ proxies:
 
 ##### fastest server #####
 
+- name: "HowdyOvhVGprc"
+  server: sg1.socifiles.com
+  port: 443
+  type: vless
+  uuid: 25606560-e01a-11ed-aeae-1239d0255272
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: mobilelegends.com
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: vlgrpc
+  udp: true
+
 - name: "TrogprcOvh1"
   server: sg1.socifiles.com
   port: 443
@@ -11,7 +26,7 @@ proxies:
   sni: mobilelegends.com
   network: grpc
   grpc-opts:
-   grpc-mode: multi
+   grpc-mode: gun
    grpc-service-name: trgrpc
   udp: true
 
@@ -24,7 +39,7 @@ proxies:
   sni: mobilelegends.com
   network: grpc
   grpc-opts:
-   grpc-mode: multi
+   grpc-mode: gun
    grpc-service-name: /xray-trojan/grpc
   udp: true
 
@@ -37,7 +52,7 @@ proxies:
   sni: mobilelegends.com
   network: grpc
   grpc-opts:
-   grpc-mode: multi
+   grpc-mode: gun
    grpc-service-name: trgrpc
   udp: true
 
@@ -50,7 +65,7 @@ proxies:
   sni: mobilelegends.com
   network: grpc
   grpc-opts:
-   grpc-mode: multi
+   grpc-mode: gun
    grpc-service-name: xray-trojan-grpc
   udp: true
 
@@ -63,7 +78,7 @@ proxies:
   sni: mobilelegends.com
   network: grpc
   grpc-opts:
-   grpc-mode: multi
+   grpc-mode: gun
    grpc-service-name: trgrpc
   udp: true
 
