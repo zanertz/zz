@@ -2,6 +2,21 @@ proxies:
 
 ##### fastest server #####
 
+- name: "CloudHostVGprc"
+  server: sg1.kitu.xyz
+  port: 443
+  type: vless
+  uuid: 2395c040-214d-49a6-af60-c227f203b1a5
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: mobilelegends.com
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: xray-vless-grpc
+  udp: true
+
 - name: "HowdyOvhVGprc"
   server: sg1.socifiles.com
   port: 443
@@ -81,6 +96,18 @@ proxies:
    grpc-mode: gun
    grpc-service-name: trgrpc
   udp: true
+
+- name: "NoexpireAmpSg20gb"
+  type: trojan
+  server: sg-2.test3.net
+  port: 443
+  password: 7e7fda10-e17a-11ed-9650-1239d0255272
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
 
 - name: "backserversk3-30apr"
   server: sg3-v2ray.sshkit.org

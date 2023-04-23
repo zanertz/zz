@@ -36,6 +36,23 @@ proxies:
    headers:
     Host: mm.net.my
 
+- name: "LionSshVmes"
+  server: ulist.com.my.vm.sg.goserver.pw
+  port: 443
+  type: vmess
+  uuid: 0290cfbb-a09a-4a67-a65e-39669fb055e3
+  sni: mm.net.my
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /v2ray-vmess/tls
+   headers:
+    Host: mm.net.my
+
 - name: "HowdyUdp1"
   type: trojan
   server: ulist.com.my.troh1.merutd.cloudns.nz
