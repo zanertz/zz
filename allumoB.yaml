@@ -2,6 +2,21 @@ proxies:
 
 ##### fastest server #####
 
+- name: "freeovhraya30apr"
+  server: ramadan.gtsz.x-nakata.ovh
+  port: 443
+  type: vless
+  uuid: d47c5be8-733f-4b4b-a461-c8dbe5c4a4c5
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: mobilelegends.com
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: vless-grpc
+  udp: true
+
 - name: "CloudHostVGprc"
   server: sg1.kitu.xyz
   port: 443
