@@ -79,11 +79,11 @@ tun:
   auto-route: true
 
 proxies:
-- name: "howdyCanada20gb23march"
+- name: "howdyCanada20gb"
   type: trojan
   server: api.whatsapp.com.ca-trojan.bonds.id
   port: 443
-  password: 57cd8250-c922-11ed-8bba-1239d0255272
+  password: 3e899120-e17e-11ed-87b5-1239d0255272
   udp: true
   sni: whatsapp.com
   alpn:
@@ -107,7 +107,7 @@ proxy-groups:
   - superfastlane
   - supercharged
   - Ping++
-  - howdyCanada20gb23march
+  - howdyCanada20gb
 - name: Manual 
   type: select
   url: 'https://duckduckgo.com'
@@ -223,10 +223,10 @@ proxy-providers:
       url: https://duckduckgo.com
 
 rules:
-  - IP-CIDR,47.254.192.14/32,howdyCanada20gb23march
-  - IP-CIDR,47.254.250.25/32,howdyCanada20gb23march
-  - IP-CIDR,47.254.230.116/32,howdyCanada20gb23march
-  - IP-CIDR,47.254.192.234/32,howdyCanada20gb23march
+  - IP-CIDR,47.254.192.14/32,howdyCanada20gb
+  - IP-CIDR,47.254.250.25/32,howdyCanada20gb
+  - IP-CIDR,47.254.230.116/32,howdyCanada20gb
+  - IP-CIDR,47.254.192.234/32,howdyCanada20gb
   - DOMAIN-SUFFIX,support1.like.video,superfastlane
   - DOMAIN-SUFFIX,gdl.bigo.sg,superfastlane
   - DOMAIN-SUFFIX,activity.bigo.tv,superfastlane
@@ -269,9 +269,9 @@ rules:
   - DOMAIN-KEYWORD,ytimg,supercharged
   - DOMAIN-KEYWORD,instagram,superfastlane
   - DOMAIN-KEYWORD,image,supercharged
-  - DOMAIN-SUFFIX,duckduckgo.com,howdyCanada20gb23march
+  - DOMAIN-SUFFIX,duckduckgo.com,howdyCanada20gb
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
-  - DOMAIN-SUFFIX,raw.githubusercontent.com,howdyCanada20gb23march
+  - DOMAIN-SUFFIX,raw.githubusercontent.com,howdyCanada20gb
   - DOMAIN-SUFFIX,sg-3.test3.net,DIRECT
   - DOMAIN-SUFFIX,ad.com,REJECT
   - DOMAIN,analytics.google.com,REJECT
