@@ -83,7 +83,7 @@ proxies:
   type: trojan
   server: api.whatsapp.com.ca-trojan.bonds.id
   port: 443
-  password: 3e899120-e17e-11ed-87b5-1239d0255272
+  password: 07bfcfc0-e287-11ed-a4af-1239d0255272
   udp: true
   sni: whatsapp.com
   alpn:

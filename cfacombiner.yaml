@@ -25,8 +25,8 @@ dns:
     - 1.0.0.1
     - 1.0.0.2
   nameserver:
-    - https://sky.rethinkdns.com/1:-B9_A-_9____3___2NX88zEACmoAWA==/dns-query
-    - tls://1-7apx6a7p7x7777677775rvp46myqactkabma.max.rethinkdns.com:853
+    - https://dns.nextdns.io/f69682
+    - tls://f69682.dns.nextdns.io:853
   fallback:
     - tcp://1.1.1.1
     - tcp://1.1.1.2
@@ -81,22 +81,22 @@ proxy-groups:
   interval: 500
   proxies:
   - DIRECT
-  - Directo
+  - superfastlaneZ
   - superfastlane
-- name: Directo
+- name: superfastlane
   type: fallback
   url: 'https://duckduckgo.com'
   tolerance: 600
   interval: 30
   lazy: false
   proxies:
-  - superfastlane
+  - superfastlaneZ
   - DIRECT
-- name: superfastlane
+- name: superfastlaneZ
   type: fallback
   url: 'https://duckduckgo.com'
   tolerance: 600
-  interval: 72
+  interval: 30
   lazy: false
   use: 
   - sall2
@@ -172,4 +172,4 @@ rules:
   - DOMAIN-KEYWORD,adservice,REJECT
   - DOMAIN-KEYWORD,analytics,REJECT
   - DOMAIN-KEYWORD,analysis,REJECT
-  - MATCH,Directo
+  - MATCH,DIRECT

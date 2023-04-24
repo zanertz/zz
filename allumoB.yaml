@@ -114,7 +114,7 @@ proxies:
 
 - name: "NoexpireAmpSg20gb"
   type: trojan
-  server: sg-2.test3.net
+  server: sg-2.test3.netyyttt
   port: 443
   password: 7e7fda10-e17a-11ed-9650-1239d0255272
   udp: true
