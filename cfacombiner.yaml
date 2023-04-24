@@ -83,7 +83,7 @@ proxy-groups:
   - DIRECT
   - superfastlaneZ
   - superfastlane
-- name: superfastlane
+- name: superfastlaneZ
   type: fallback
   url: 'https://duckduckgo.com'
   tolerance: 600
@@ -92,11 +92,11 @@ proxy-groups:
   proxies:
   - superfastlaneZ
   - DIRECT
-- name: superfastlaneZ
+- name: superfastlane
   type: fallback
   url: 'https://duckduckgo.com'
-  tolerance: 600
-  interval: 30
+  tolerance: 1200
+  interval: 120
   lazy: false
   use: 
   - sall2
@@ -150,10 +150,15 @@ rules:
   - DOMAIN-KEYWORD,akamai.net,superfastlane
   - DOMAIN-KEYWORD,akamaiedge.net,superfastlane
   - DOMAIN-KEYWORD,bigo,superfastlane
-  - DOMAIN-KEYWORD,google,superfastlane
-  - DOMAIN-KEYWORD,gstatic,superfastlane
-  - DOMAIN-KEYWORD,youtube,superfastlane
-  - DOMAIN-KEYWORD,ytimg,superfastlane
+  - DOMAIN-KEYWORD,google,DIRECT
+  - DOMAIN-KEYWORD,gstatic,DIRECT
+  - DOMAIN-KEYWORD,youtube,DIRECT
+  - DOMAIN-KEYWORD,flv,DIRECT
+  - DOMAIN-KEYWORD,rtmp,DIRECT
+  - DOMAIN-KEYWORD,f4v,DIRECT
+  - DOMAIN-KEYWORD,hls,DIRECT
+  - DOMAIN-KEYWORD,mp4,DIRECT
+  - DOMAIN-KEYWORD,ytimg,DIRECT
   - DOMAIN-KEYWORD,instagram,superfastlane
   - DOMAIN-KEYWORD,image,superfastlane
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT

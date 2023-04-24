@@ -17,17 +17,17 @@ proxies:
     grpc-service-name: vless-grpc
   udp: true
 
-- name: "tgprc"
-  server: sg1.kitu.xyzyyy
+- name: "ovhtgprc"
+  server: sg1.socifiles.com
   port: 443
   type: trojan
-  password: 1012253a-5ebf-4b68-87f3-39c7f1d03f86
+  password: 6ae736d0-e2ec-11ed-b155-1239d0255272
   skip-cert-verify: true
-  sni: mobilelegends.com
+  sni: yahoo.com
   network: grpc
   grpc-opts:
    grpc-mode: gun
-   grpc-service-name: xray-trojan-grpc
+   grpc-service-name: trgrpc
   udp: true
 
 - name: "OpentunnelOvh20gb"
@@ -43,7 +43,7 @@ proxies:
   skip-cert-verify: true
 
 - name: "backserversk3-30apr"
-  server: sg3-v2ray.sshkit.org
+  server: sg3-v2ray.sshkit.orgyyyy
   port: 443
   type: vmess
   uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
