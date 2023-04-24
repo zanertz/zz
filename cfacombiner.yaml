@@ -90,7 +90,7 @@ proxy-groups:
   interval: 30
   lazy: false
   proxies:
-  - superfastlaneZ
+  - superfastlane
   - DIRECT
 - name: superfastlane
   type: fallback
