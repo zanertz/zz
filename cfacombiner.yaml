@@ -1,0 +1,175 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+tproxy-port: 7893
+mixed-port: 7894
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+external-ui: folder
+interface-name: en0
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7895
+  fallback-filter:
+    geoip: false
+    ipcidr:
+    - 240.0.0.0/4
+  default-nameserver:
+    - 1.1.1.1
+    - 1.1.1.2
+    - 1.0.0.1
+    - 1.0.0.2
+  nameserver:
+    - https://sky.rethinkdns.com/1:-B9_A-_9____3___2NX88zEACmoAWA==/dns-query
+    - tls://1-7apx6a7p7x7777677775rvp46myqactkabma.max.rethinkdns.com:853
+  fallback:
+    - tcp://1.1.1.1
+    - tcp://1.1.1.2
+    - tcp://1.0.0.1
+    - tcp://1.0.0.2
+    - 1.1.1.1
+    - 1.1.1.2
+    - 1.0.0.1
+    - 1.0.0.2
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - "+.*"
+  - ntp7.*.com
+  - ntp6.*.com
+  - ntp5.*.com
+  - ntp4.*.com
+  - ntp3.*.com
+  - ntp2.*.com
+  - ntp1.*.com
+  - ntp.*.com
+  - time7.*.com
+  - time6.*.com
+  - time5.*.com
+  - time4.*.com
+  - time3.*.com
+  - time2.*.com
+  - time1.*.com
+  - time.*.apple.com
+  - time.*.edu.cn
+  - time.*.gov
+  - time.*.com
+  - "*.home.arpa"
+  - "*.local"
+  - "*.test"
+  - "*.localhost"
+  - "*.invalid"
+  - "*.example"
+  - "*.localdomain"
+  - "*.lan"
+tun:
+  enable: true
+  dns-hijack:
+  - tcp://1.1.1.1:53
+  - tcp://1.1.1.2:53
+  stack: system
+  auto-route: true
+
+proxy-groups: 
+- name: All 
+  type: select
+  url: 'https://duckduckgo.com'
+  interval: 500
+  proxies:
+  - DIRECT
+  - Directo
+  - superfastlane
+- name: Directo
+  type: fallback
+  url: 'https://duckduckgo.com'
+  tolerance: 600
+  interval: 30
+  lazy: false
+  proxies:
+  - superfastlane
+  - DIRECT
+- name: superfastlane
+  type: fallback
+  url: 'https://duckduckgo.com'
+  tolerance: 600
+  interval: 72
+  lazy: false
+  use: 
+  - sall2
+
+proxy-providers:
+  sall2:
+    type: http
+    url: "https://raw.githubusercontent.com/zanertz/zz/main/acombiner.yaml"
+    interval: 120
+    path: ./sall2.yaml
+    health-check:
+      enable: true
+      interval: 120
+      lazy: false
+      url: https://duckduckgo.com
+
+rules:
+  - DOMAIN-SUFFIX,support1.like.video,superfastlane
+  - DOMAIN-SUFFIX,gdl.bigo.sg,superfastlane
+  - DOMAIN-SUFFIX,activity.bigo.tv,superfastlane
+  - DOMAIN-SUFFIX,graph.facebook.com,superfastlane
+  - DOMAIN-SUFFIX,launches.appsflyersdk.com,superfastlane
+  - DOMAIN-SUFFIX,static-act.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,api.likee.video,superfastlane
+  - DOMAIN-SUFFIX,static-act.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,exp.bigo.sg,superfastlane
+  - DOMAIN-SUFFIX,inapps.appsflyersdk.com,superfastlane
+  - DOMAIN-SUFFIX,hotroom.live.bigo.sg,superfastlane
+  - DOMAIN-SUFFIX,flag.bigo.sg,superfastlane
+  - DOMAIN-SUFFIX,static.f2ecdn.com,superfastlane
+  - DOMAIN-SUFFIX,support1.like.video,superfastlane
+  - DOMAIN-SUFFIX,esx.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,esx.bigo.sg,superfastlane
+  - DOMAIN-SUFFIX,firebaseremoteconfig.googleapis.com,superfastlane
+  - DOMAIN-SUFFIX,static-fed.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,static-web.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,ta.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,static-act.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,ta.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,static-act.bigolive.tv,superfastlane
+  - DOMAIN-SUFFIX,support-json.like.video,superfastlane
+  - DOMAIN-SUFFIX,newlbs.live.bigo.sg,superfastlane
+  - DOMAIN-SUFFIX,bstream.sgmbocast.com,superfastlane
+  - DOMAIN-SUFFIX,v-sg.likee.video,superfastlane
+  - DOMAIN-SUFFIX,socks.live.bigo.sg,superfastlane
+  - DOMAIN-SUFFIX,asiabigosocks.like.bigo.sg,superfastlane
+  - DOMAIN-KEYWORD,tiktokcdn.com,superfastlane
+  - DOMAIN-KEYWORD,tiktokv.com,superfastlane
+  - DOMAIN-KEYWORD,tiktok.com,superfastlane
+  - DOMAIN-KEYWORD,tiktok,superfastlane
+  - DOMAIN-KEYWORD,akamai.net,superfastlane
+  - DOMAIN-KEYWORD,akamaiedge.net,superfastlane
+  - DOMAIN-KEYWORD,bigo,superfastlane
+  - DOMAIN-KEYWORD,google,superfastlane
+  - DOMAIN-KEYWORD,gstatic,superfastlane
+  - DOMAIN-KEYWORD,youtube,superfastlane
+  - DOMAIN-KEYWORD,ytimg,superfastlane
+  - DOMAIN-KEYWORD,instagram,superfastlane
+  - DOMAIN-KEYWORD,image,superfastlane
+  - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
+  - DOMAIN-SUFFIX,raw.githubusercontent.com,DIRECT
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - DOMAIN,analytics.google.com,REJECT
+  - DOMAIN,analyticsinsights-pa.googleapis.com,REJECT
+  - DOMAIN,analyticsreporting.googleapis.com,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,googleadservices.com,REJECT
+  - DOMAIN-SUFFIX,googleadsserving.cn,REJECT
+  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,googletagmanager.com,REJECT
+  - DOMAIN-SUFFIX,googletagservices.com,REJECT
+  - DOMAIN-SUFFIX,google-analytics.com,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-KEYWORD,analytics,REJECT
+  - DOMAIN-KEYWORD,analysis,REJECT
+  - MATCH,Directo
