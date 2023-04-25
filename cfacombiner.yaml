@@ -83,21 +83,21 @@ proxy-groups:
   - DIRECT
   - superfastlaneZ
   - superfastlane
-- name: superfastlaneZ
-  type: fallback
-  url: 'https://duckduckgo.com'
-  tolerance: 600
-  interval: 30
-  lazy: false
-  proxies:
-  - superfastlane
-  - DIRECT
 - name: superfastlane
   type: fallback
   url: 'https://duckduckgo.com'
-  tolerance: 1200
-  interval: 120
-  lazy: false
+  tolerance: 2000
+  interval: 5
+  lazy: true
+  proxies:
+  - superfastlaneZ
+  - DIRECT
+- name: superfastlaneZ
+  type: fallback
+  url: 'https://duckduckgo.com'
+  tolerance: 2000
+  interval: 5
+  lazy: true
   use: 
   - sall2
 
@@ -110,7 +110,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 120
-      lazy: false
+      lazy: true
       url: https://duckduckgo.com
 
 rules:
@@ -152,13 +152,13 @@ rules:
   - DOMAIN-KEYWORD,bigo,superfastlane
   - DOMAIN-KEYWORD,google,DIRECT
   - DOMAIN-KEYWORD,gstatic,DIRECT
-  - DOMAIN-KEYWORD,youtube,DIRECT
-  - DOMAIN-KEYWORD,flv,DIRECT
-  - DOMAIN-KEYWORD,rtmp,DIRECT
-  - DOMAIN-KEYWORD,f4v,DIRECT
-  - DOMAIN-KEYWORD,hls,DIRECT
-  - DOMAIN-KEYWORD,mp4,DIRECT
-  - DOMAIN-KEYWORD,ytimg,DIRECT
+  - DOMAIN-KEYWORD,youtube,superfastlane
+  - DOMAIN-KEYWORD,flv,superfastlane
+  - DOMAIN-KEYWORD,rtmp,superfastlane
+  - DOMAIN-KEYWORD,f4v,superfastlane
+  - DOMAIN-KEYWORD,hls,superfastlane
+  - DOMAIN-KEYWORD,mp4,superfastlane
+  - DOMAIN-KEYWORD,ytimg,superfastlane
   - DOMAIN-KEYWORD,instagram,superfastlane
   - DOMAIN-KEYWORD,image,superfastlane
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT

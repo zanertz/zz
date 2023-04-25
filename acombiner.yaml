@@ -2,21 +2,6 @@ proxies:
 
 ##### fastest server #####
 
-- name: "vgprc"
-  server: ramadan.gtsz.x-nakata.ovhyyyy
-  port: 443
-  type: vless
-  uuid: d47c5be8-733f-4b4b-a461-c8dbe5c4a4c5
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: mobilelegends.com
-  network: grpc
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: vless-grpc
-  udp: true
-
 - name: "ovhtgprc"
   server: sg1.socifiles.com
   port: 443
@@ -30,24 +15,12 @@ proxies:
    grpc-service-name: trgrpc
   udp: true
 
-- name: "OpentunnelOvh20gb"
-  type: trojan
-  server: sgt-2.opensvr.net
-  port: 443
-  password: opentunnel.net-phantom942
-  udp: true
-  sni: yahoo.com
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
-- name: "backserversk3-30apr"
-  server: sg3-v2ray.sshkit.orgyyyy
+- name: "Dyna1may"
+  server: dynamic-sg1b.obfs.xyz
   port: 443
   type: vmess
-  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-  sni: mobilelegends.com
+  uuid: f4437f1f-ea10-47d8-92a5-6e40a63004ec
+  sni: yahoo.com
   alterId: 0
   cipher: auto
   tls: true
@@ -55,7 +28,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /sshkit/1074999023/6426fe3064ba8/
+   path: /worryfree
    headers:
     Host: yahoo.com
 
