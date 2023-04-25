@@ -15,7 +15,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-selsemq9
+   path: /u/opentunnel.net-carbinal76
    headers:
     Host: mm.net.my
 
@@ -32,7 +32,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-dryutxz55
+   path: /u/opentunnel.net-kikiolo78
    headers:
     Host: mm.net.my
 
