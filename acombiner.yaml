@@ -2,8 +2,42 @@ proxies:
 
 ##### fastest server #####
 
+- name: "OpenSGF1"
+  server: sgv-1.openv2ray.com
+  port: 443
+  type: vmess
+  uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+  sni: yahoo.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /u/opentunnel.net-vangeamd86
+   headers:
+    Host: yahoo.com
+
+- name: "OpenSGF2"
+  server: sgv-2.openv2ray.com
+  port: 443
+  type: vmess
+  uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+  sni: yahoo.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /u/opentunnel.net-brimzalo76
+   headers:
+    Host: yahoo.com
+
 - name: "ovhtgprc"
-  server: sg1.socifiles.com
+  server: sg1.socifiles.comyy
   port: 443
   type: trojan
   password: 6ae736d0-e2ec-11ed-b155-1239d0255272
@@ -16,7 +50,7 @@ proxies:
   udp: true
 
 - name: "Dyna1may"
-  server: dynamic-sg1b.obfs.xyz
+  server: dynamic-sg1b.obfs.xyzyy
   port: 443
   type: vmess
   uuid: f4437f1f-ea10-47d8-92a5-6e40a63004ec
