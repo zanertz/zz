@@ -17,6 +17,23 @@ proxies:
     grpc-service-name: vless-grpc
   udp: true
 
+- name: "Dyna1may"
+  server: dynamic-sg1b.obfs.xyz
+  port: 443
+  type: vmess
+  uuid: f4437f1f-ea10-47d8-92a5-6e40a63004ec
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /worryfree
+   headers:
+    Host: mobilelegends.com
+
 - name: "CloudHostVGprc"
   server: sg1.kitu.xyz
   port: 443

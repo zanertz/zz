@@ -223,6 +223,7 @@ proxy-providers:
       url: https://duckduckgo.com
 
 rules:
+  - IP-CIDR,38.60.193.95/32,howdyCanada20gb
   - IP-CIDR,47.254.192.14/32,howdyCanada20gb
   - IP-CIDR,47.254.250.25/32,howdyCanada20gb
   - IP-CIDR,47.254.230.116/32,howdyCanada20gb
