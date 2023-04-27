@@ -40,7 +40,7 @@ proxies:
   server: ulist.com.my.vm.sg.goserver.pw
   port: 443
   type: vmess
-  uuid: 0290cfbb-a09a-4a67-a65e-39669fb055e3
+  uuid: dccf12f5-f94c-4e1e-9d49-8e71d22a8fdc
   sni: mm.net.my
   alterId: 0
   cipher: auto
